@@ -1,0 +1,23 @@
+{
+  "id": "10-brendan-eich",
+  "title": "Brendan Eich and the 10-Day Story",
+  "estimatedMinutes": 3,
+  "learningObjectives": ["Know JavaScript's creator","Understand naming history","Learn adoption factors"],
+  "image": "./image.png",
+  "content": {
+    "explanation": "Brendan Eich created the first version of JavaScript in approximately ten days during 1995. Netscape needed a browser scripting language quickly. Marketing also wanted the language to resemble Java enough to benefit from Java's popularity. The result was JavaScript, a language that eventually became central to the modern web.",
+    "example": "Many developers still incorrectly assume JavaScript and Java are the same language.",
+    "analogy": "A startup prototype that unexpectedly becomes a global product.",
+    "keyTakeaway": "JavaScript began as a fast solution but became essential."
+  },
+  "tags": ["Brendan Eich","History","JavaScript"],
+  "category": "JavaScript Fundamentals",
+  "revisionSummary": "Brendan Eich created JavaScript in 1995.",
+  "mcqs": [
+    {"id":"q1","type":"definition","question":"Who created JavaScript?","options":["Bill Gates","Brendan Eich","James Gosling","Linus Torvalds"],"correctAnswer":1,"explanation":"Brendan Eich created JavaScript."},
+    {"id":"q2","type":"understanding","question":"Why was JavaScript named that way?","options":["Technical reasons only","Marketing influence","Database support","Compiler design"],"correctAnswer":1,"explanation":"Java popularity influenced naming."},
+    {"id":"q3","type":"application","question":"What enabled quick adoption?","options":["Complex setup","Familiar appearance","Plugins","JVM"],"correctAnswer":1,"explanation":"Familiarity helped adoption."},
+    {"id":"q4","type":"scenario","question":"A company needs a fast prototype. Which lesson applies?","options":["Perfect first","Deliver value quickly","Avoid users","Ignore deadlines"],"correctAnswer":1,"explanation":"JavaScript started as a quick solution."},
+    {"id":"q5","type":"misconception","question":"JavaScript and Java share the same runtime.","options":["True","False","Sometimes","Depends"],"correctAnswer":1,"explanation":"They have different runtimes."}
+  ]
+}

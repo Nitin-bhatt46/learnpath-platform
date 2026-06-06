@@ -1,0 +1,93 @@
+{
+  "id": "12-typeof-operator",
+  "title": "The typeof Operator",
+  "estimatedMinutes": 3,
+  "learningObjectives": [
+    "Understand the typeof operator",
+    "Identify JavaScript data types at runtime",
+    "Learn the typeof null limitation"
+  ],
+  "image": "./image.png",
+  "content": {
+    "explanation": "JavaScript is a dynamically typed language, which means variable types are determined at runtime. The typeof operator helps developers inspect the type of a value while the program is running. It is commonly used for validation, debugging, and conditional logic. For example, typeof can identify strings, numbers, booleans, functions, objects, and undefined values. This is especially useful when working with user input, APIs, or data from external sources. One important exception exists: typeof null returns 'object'. This behavior is a historical bug from the early days of JavaScript. Although incorrect, it remains unchanged because fixing it would break millions of existing applications. Understanding how typeof works and where it can be misleading is an important skill for every JavaScript developer.",
+    "example": "typeof 'Hello' returns 'string', typeof 42 returns 'number', and typeof true returns 'boolean'.",
+    "analogy": "A security guard checks a visitor's ID card before allowing access. typeof checks a value's identity before using it.",
+    "keyTakeaway": "typeof helps identify value types, but typeof null is a historical exception."
+  },
+  "tags": [
+    "typeof",
+    "Runtime",
+    "Data Types",
+    "JavaScript",
+    "Debugging"
+  ],
+  "category": "JavaScript Fundamentals",
+  "revisionSummary": "typeof detects types; null is a historical exception.",
+  "mcqs": [
+    {
+      "id": "q1",
+      "type": "definition",
+      "question": "What is the purpose of the typeof operator?",
+      "options": [
+        "Create variables",
+        "Identify a value's type",
+        "Compile code",
+        "Allocate memory"
+      ],
+      "correctAnswer": 1,
+      "explanation": "typeof returns information about a value's data type."
+    },
+    {
+      "id": "q2",
+      "type": "understanding",
+      "question": "Why is typeof useful in JavaScript?",
+      "options": [
+        "Because JavaScript is dynamically typed",
+        "Because JavaScript has no variables",
+        "Because CPUs require it",
+        "Because browsers need it to load HTML"
+      ],
+      "correctAnswer": 0,
+      "explanation": "JavaScript determines types at runtime, making typeof useful for inspection."
+    },
+    {
+      "id": "q3",
+      "type": "application",
+      "question": "What is the output of typeof 'Nitin'?",
+      "options": [
+        "text",
+        "string",
+        "object",
+        "character"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Strings return 'string' when checked with typeof."
+    },
+    {
+      "id": "q4",
+      "type": "scenario",
+      "question": "A function receives unknown user input. Which operator can help verify whether the value is a string before processing it?",
+      "options": [
+        "delete",
+        "new",
+        "typeof",
+        "instanceof"
+      ],
+      "correctAnswer": 2,
+      "explanation": "typeof is commonly used for runtime type checking."
+    },
+    {
+      "id": "q5",
+      "type": "misconception",
+      "question": "typeof null returns 'null'.",
+      "options": [
+        "True",
+        "False",
+        "Only in modern browsers",
+        "Only in Node.js"
+      ],
+      "correctAnswer": 1,
+      "explanation": "typeof null returns 'object' due to a historical JavaScript bug."
+    }
+  ]
+}

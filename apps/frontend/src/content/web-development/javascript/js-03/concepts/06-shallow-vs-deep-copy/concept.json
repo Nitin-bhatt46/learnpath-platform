@@ -1,0 +1,93 @@
+{
+  "id": "06-shallow-vs-deep-copy",
+  "title": "Shallow Copy vs Deep Copy",
+  "estimatedMinutes": 3,
+  "learningObjectives": [
+    "Understand reference sharing",
+    "Learn shallow copy behavior",
+    "Learn deep copy behavior"
+  ],
+  "image": "./image.png",
+  "content": {
+    "explanation": "When working with objects in JavaScript, copying data is not always straightforward. A shallow copy creates a new object, but nested objects inside it still share references with the original object. As a result, changes to nested data may affect both copies. A deep copy creates completely independent copies of all nested structures, ensuring that changes in one object do not affect the other. Reference sharing occurs when two variables point to the same object in memory. This is common when assigning one object variable to another. Understanding the difference between shallow and deep copying is important because unintended reference sharing can lead to bugs in applications. Modern JavaScript provides tools such as structuredClone() for creating deep copies. Choosing the correct copying strategy helps developers avoid side effects and maintain predictable program behavior.",
+    "example": "If user and admin reference the same object, changing admin.name also changes user.name. A deep copy prevents this behavior.",
+    "analogy": "A shallow copy is like photocopying a folder label but keeping the same documents inside. A deep copy duplicates both the folder and every document.",
+    "keyTakeaway": "Shallow copies may share nested references, while deep copies create fully independent objects."
+  },
+  "tags": [
+    "Shallow Copy",
+    "Deep Copy",
+    "Reference",
+    "Object",
+    "JavaScript"
+  ],
+  "category": "Memory Management",
+  "revisionSummary": "Deep copies are independent; shallow copies may share references.",
+  "mcqs": [
+    {
+      "id": "q1",
+      "type": "definition",
+      "question": "What is a deep copy?",
+      "options": [
+        "A copy that shares all references",
+        "A copy that duplicates all nested data",
+        "A copy stored in stack memory",
+        "A copy stored in browser cache"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A deep copy creates completely independent copies of nested structures."
+    },
+    {
+      "id": "q2",
+      "type": "understanding",
+      "question": "Why can shallow copies cause unexpected bugs?",
+      "options": [
+        "They increase CPU speed",
+        "They share nested references",
+        "They remove objects",
+        "They disable garbage collection"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Nested objects may still point to the same memory locations."
+    },
+    {
+      "id": "q3",
+      "type": "application",
+      "question": "Which method is commonly used for deep copying modern JavaScript objects?",
+      "options": [
+        "parseInt()",
+        "typeof",
+        "structuredClone()",
+        "console.log()"
+      ],
+      "correctAnswer": 2,
+      "explanation": "structuredClone() creates deep copies of supported values."
+    },
+    {
+      "id": "q4",
+      "type": "scenario",
+      "question": "A developer copies a settings object and later changes a nested property. The original object also changes. What most likely happened?",
+      "options": [
+        "A deep copy was used",
+        "The object became immutable",
+        "A shallow copy shared references",
+        "Garbage collection failed"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Shared nested references are a characteristic of shallow copies."
+    },
+    {
+      "id": "q5",
+      "type": "misconception",
+      "question": "Assigning one object variable to another automatically creates a deep copy.",
+      "options": [
+        "True",
+        "False",
+        "Only for arrays",
+        "Only in strict mode"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Assignment copies the reference, not the entire object."
+    }
+  ]
+}

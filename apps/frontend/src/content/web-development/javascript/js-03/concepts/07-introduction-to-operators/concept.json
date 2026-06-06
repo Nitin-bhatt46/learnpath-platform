@@ -1,0 +1,93 @@
+{
+  "id": "07-introduction-to-operators",
+  "title": "Introduction to JavaScript Operators",
+  "estimatedMinutes": 3,
+  "learningObjectives": [
+    "Understand what operators are",
+    "Identify operands and expressions",
+    "Learn how operators produce results"
+  ],
+  "image": "./image.png",
+  "content": {
+    "explanation": "Operators are special symbols or keywords that perform actions on values. The values that operators work on are called operands. Together, operators and operands form expressions, and expressions produce results. For example, in the expression 5 + 10, the numbers 5 and 10 are operands while + is the operator. The expression evaluates to 15. Operators exist because programming would be extremely difficult without concise ways to perform calculations, comparisons, assignments, and logical decisions. Instead of writing many instructions for every operation, developers use operators as shortcuts. JavaScript provides several categories of operators including arithmetic, assignment, comparison, logical, bitwise, and special operators. Understanding operators is essential because nearly every JavaScript program uses them to process data, make decisions, and control application behavior.",
+    "example": "The expression let result = 5 + 10 uses the + operator to add two operands and produce the value 15.",
+    "analogy": "If values are ingredients, operators are the cooking actions that transform them into a final dish.",
+    "keyTakeaway": "Operators perform actions on operands and produce meaningful results."
+  },
+  "tags": [
+    "Operators",
+    "Operands",
+    "Expressions",
+    "JavaScript",
+    "Fundamentals"
+  ],
+  "category": "JavaScript Fundamentals",
+  "revisionSummary": "Operators act on values to produce results.",
+  "mcqs": [
+    {
+      "id": "q1",
+      "type": "definition",
+      "question": "What is an operator in JavaScript?",
+      "options": [
+        "A memory location",
+        "A special symbol that performs an operation",
+        "A variable type",
+        "A browser feature"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Operators perform actions on values or operands."
+    },
+    {
+      "id": "q2",
+      "type": "understanding",
+      "question": "What are operands?",
+      "options": [
+        "The values an operator works on",
+        "The result of a function",
+        "Memory addresses",
+        "JavaScript files"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Operands are the values used by operators."
+    },
+    {
+      "id": "q3",
+      "type": "application",
+      "question": "In the expression 20 - 5, what is the operator?",
+      "options": [
+        "20",
+        "5",
+        "-",
+        "15"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The minus symbol performs the subtraction operation."
+    },
+    {
+      "id": "q4",
+      "type": "scenario",
+      "question": "A developer needs to add two numbers and store the result. Why would they use an operator?",
+      "options": [
+        "To create HTML",
+        "To perform an action on values",
+        "To allocate memory",
+        "To start the browser"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Operators allow actions such as addition, comparison, and assignment."
+    },
+    {
+      "id": "q5",
+      "type": "misconception",
+      "question": "Operators only perform mathematical calculations.",
+      "options": [
+        "True",
+        "False",
+        "Only in Node.js",
+        "Only in browsers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Operators can also compare values, assign data, and evaluate logic."
+    }
+  ]
+}

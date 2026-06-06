@@ -1,0 +1,66 @@
+{
+  "quickRevision": [
+    {
+      "title": "Primitive vs Object",
+      "summary": "JavaScript values are primitive or object based."
+    },
+    {
+      "title": "Primitive Characteristics",
+      "summary": "Primitives are immutable and copied by value."
+    },
+    {
+      "title": "Object References",
+      "summary": "Objects are stored and copied by reference."
+    },
+    {
+      "title": "Memory Model",
+      "summary": "Stack stores references, heap stores objects."
+    },
+    {
+      "title": "Object Comparison",
+      "summary": "Objects compare by reference identity."
+    },
+    {
+      "title": "Copying Objects",
+      "summary": "Shallow and deep copies behave differently."
+    },
+    {
+      "title": "Operators",
+      "summary": "Operators perform actions on values."
+    },
+    {
+      "title": "Assignment",
+      "summary": "Assignment operators store and update values."
+    },
+    {
+      "title": "Arithmetic",
+      "summary": "Arithmetic operators perform calculations."
+    },
+    {
+      "title": "Comparison",
+      "summary": "Comparison operators return true or false."
+    },
+    {
+      "title": "Logical",
+      "summary": "Logical operators evaluate conditions."
+    },
+    {
+      "title": "Precedence",
+      "summary": "Operator precedence controls evaluation order."
+    }
+  ],
+  "flow": [
+    "Primitive vs Non Primitive",
+    "Primitive Characteristics",
+    "Object Reference Model",
+    "Stack and Heap Memory",
+    "Object Comparison",
+    "Shallow vs Deep Copy",
+    "Introduction to Operators",
+    "Assignment Operators",
+    "Arithmetic Operators",
+    "Comparison Operators",
+    "Logical Operators",
+    "Operator Precedence"
+  ]
+}

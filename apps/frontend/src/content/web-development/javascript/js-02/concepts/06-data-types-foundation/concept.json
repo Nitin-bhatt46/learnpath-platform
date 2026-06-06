@@ -1,0 +1,92 @@
+{
+  "id": "06-data-types-foundation",
+  "title": "Why Data Types Exist",
+  "estimatedMinutes": 3,
+  "learningObjectives": [
+    "Understand why data types are needed",
+    "Learn how computers store information",
+    "Understand JavaScript's dynamic typing"
+  ],
+  "image": "./image.png",
+  "content": {
+    "explanation": "At the lowest level, computer memory is simply a collection of bits represented as 0s and 1s. The same sequence of bits can represent different things depending on how it is interpreted. For example, a binary value could represent a number, a character, a memory address, or a boolean value. Without additional information, the computer cannot determine the intended meaning. Data types solve this problem by providing context. A data type tells the computer how much memory to allocate, how to interpret the stored value, and what operations are valid. JavaScript uses dynamic typing, meaning variables do not need a fixed type declaration. A variable can store a number at one moment and a string later. This flexibility makes JavaScript easier for beginners but also introduces some unique behaviors that developers must understand.",
+    "example": "The value 42 is treated as a number, while \"42\" is treated as text even though they look similar.",
+    "analogy": "A shipping box label tells workers whether the contents are fragile, food, or electronics. Data types act as labels for memory.",
+    "keyTakeaway": "Data types give meaning and rules to values stored in memory."
+  },
+  "tags": [
+    "Data Types",
+    "Memory",
+    "JavaScript",
+    "Dynamic Typing"
+  ],
+  "category": "JavaScript Fundamentals",
+  "revisionSummary": "Data types give meaning to raw memory values.",
+  "mcqs": [
+    {
+      "id": "q1",
+      "type": "definition",
+      "question": "What is the primary purpose of a data type?",
+      "options": [
+        "To style webpages",
+        "To give meaning to stored values",
+        "To create variables",
+        "To increase CPU speed"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Data types tell the computer how to interpret and use stored data."
+    },
+    {
+      "id": "q2",
+      "type": "understanding",
+      "question": "Why can't a computer rely only on raw binary values?",
+      "options": [
+        "Binary values are too large",
+        "CPUs cannot read binary",
+        "The same bits can represent different kinds of data",
+        "Memory only stores text"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The same sequence of bits can represent numbers, characters, addresses, or other data."
+    },
+    {
+      "id": "q3",
+      "type": "application",
+      "question": "In JavaScript, a variable stores 100 and later stores \"Hello\". What does this demonstrate?",
+      "options": [
+        "Static typing",
+        "Dynamic typing",
+        "Compilation",
+        "Garbage collection"
+      ],
+      "correctAnswer": 1,
+      "explanation": "JavaScript allows variables to hold different types during execution."
+    },
+    {
+      "id": "q4",
+      "type": "scenario",
+      "question": "A system receives the value 01001000. Why is a data type needed?",
+      "options": [
+        "To increase RAM",
+        "To determine the value's meaning",
+        "To create machine code",
+        "To improve networking"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Without a data type, the system cannot determine what the bits represent."
+    },
+    {
+      "id": "q5",
+      "type": "misconception",
+      "question": "JavaScript variables must always be declared with a fixed data type.",
+      "options": [
+        "True",
+        "False",
+        "Only in browsers",
+        "Only in Node.js"
+      ],
+      "correctAnswer": 1,
+      "explanation": "JavaScript is dynamically typed, so variables can hold different types over time."
+    }
+  ]
+}

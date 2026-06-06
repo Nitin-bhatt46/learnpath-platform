@@ -1,0 +1,21 @@
+{
+  "id": "js-class-01",
+  "title": "Why JavaScript Exists",
+  "description": "Understand the foundations of web development, why JavaScript was created, and how it became the language of the web.",
+  "estimatedMinutes": 36,
+  "difficulty": "Beginner",
+  "conceptOrder": [
+    "01-web-foundation",
+    "02-need-for-javascript",
+    "03-why-not-cpp",
+    "04-browser-security",
+    "05-hardware-limitations",
+    "06-garbage-collection",
+    "07-history-of-javascript",
+    "08-java-vs-javascript",
+    "09-glue-language",
+    "10-brendan-eich",
+    "11-javascript-wins",
+    "12-webassembly-and-future"
+  ]
+}

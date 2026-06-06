@@ -1,0 +1,62 @@
+{
+  "id": "03-nodejs-runtime",
+  "title": "Node.js Runtime Environment",
+  "estimatedMinutes": 3,
+  "learningObjectives": [
+    "Understand Node.js",
+    "Run JavaScript outside browsers",
+    "Learn runtime environments"
+  ],
+  "image": "./image.png",
+  "content": {
+    "explanation": "Originally JavaScript could only run inside browsers. Node.js changed this by embedding the V8 engine into a server-side runtime environment. It provides APIs for file systems, networking, processes, and operating system interactions. This allows developers to use JavaScript for backend applications, automation, and command-line tools.",
+    "example": "Node.js can create files on disk using the file system module.",
+    "analogy": "A car engine installed in a different vehicle can perform new jobs beyond its original purpose.",
+    "keyTakeaway": "Node.js enables JavaScript to run outside the browser."
+  },
+  "tags": ["Node.js", "Runtime", "V8"],
+  "category": "JavaScript Runtime",
+  "revisionSummary": "Node.js runs JavaScript on operating systems.",
+  "mcqs": [
+    {
+      "id": "q1",
+      "type": "definition",
+      "question": "What is Node.js?",
+      "options": ["Database", "JavaScript runtime", "Browser", "Framework"],
+      "correctAnswer": 1,
+      "explanation": "Node.js is a runtime environment."
+    },
+    {
+      "id": "q2",
+      "type": "understanding",
+      "question": "Why was Node.js created?",
+      "options": ["To replace browsers", "To run JavaScript outside browsers", "To create HTML", "To build CPUs"],
+      "correctAnswer": 1,
+      "explanation": "Node.js extends JavaScript beyond browsers."
+    },
+    {
+      "id": "q3",
+      "type": "application",
+      "question": "Which task can Node.js perform?",
+      "options": ["Modify files", "Change CPU design", "Build hardware", "Replace RAM"],
+      "correctAnswer": 0,
+      "explanation": "Node.js provides file system APIs."
+    },
+    {
+      "id": "q4",
+      "type": "scenario",
+      "question": "You need a JavaScript backend server. What should you use?",
+      "options": ["CSS", "Node.js", "HTML", "PNG"],
+      "correctAnswer": 1,
+      "explanation": "Node.js is commonly used for backend development."
+    },
+    {
+      "id": "q5",
+      "type": "misconception",
+      "question": "JavaScript can only run inside browsers.",
+      "options": ["True", "False", "Partially", "Depends"],
+      "correctAnswer": 1,
+      "explanation": "Node.js allows execution outside browsers."
+    }
+  ]
+}

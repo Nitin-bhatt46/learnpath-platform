@@ -1,0 +1,62 @@
+{
+  "id": "05-webassembly-execution",
+  "title": "How WebAssembly Executes",
+  "estimatedMinutes": 3,
+  "learningObjectives": [
+    "Compare JS and WASM pipelines",
+    "Understand execution flow",
+    "Learn browser integration"
+  ],
+  "image": "./image.png",
+  "content": {
+    "explanation": "JavaScript and WebAssembly use different execution pipelines inside browsers. JavaScript goes through parsing, bytecode generation, and optimization. WebAssembly arrives as binary instructions and goes through validation and compilation. Although their paths differ, both eventually become machine code executed by the CPU. This shared destination allows both technologies to work together efficiently.",
+    "example": "A JavaScript application can call a WebAssembly function for heavy calculations.",
+    "analogy": "Two roads from different cities leading to the same destination.",
+    "keyTakeaway": "JavaScript and WebAssembly follow different paths to machine code."
+  },
+  "tags": ["WASM", "Execution", "CPU"],
+  "category": "Runtime Foundations",
+  "revisionSummary": "Different pipelines reach the same CPU.",
+  "mcqs": [
+    {
+      "id": "q1",
+      "type": "definition",
+      "question": "What is the final output of JS and WASM pipelines?",
+      "options": ["HTML", "Machine code", "Database", "CSS"],
+      "correctAnswer": 1,
+      "explanation": "Both produce machine instructions."
+    },
+    {
+      "id": "q2",
+      "type": "understanding",
+      "question": "Why can JS and WASM work together?",
+      "options": ["Same CSS", "Shared execution environment", "Same HTML", "Same syntax"],
+      "correctAnswer": 1,
+      "explanation": "Both run inside the browser runtime."
+    },
+    {
+      "id": "q3",
+      "type": "application",
+      "question": "A JavaScript app calls a WASM function. What occurs?",
+      "options": ["Bridge communication", "Database query", "CSS update", "Compilation failure"],
+      "correctAnswer": 0,
+      "explanation": "JS and WASM communicate through runtime bridges."
+    },
+    {
+      "id": "q4",
+      "type": "scenario",
+      "question": "You need fast calculations and UI updates. Best approach?",
+      "options": ["Only HTML", "Only CSS", "JS plus WASM", "Only SQL"],
+      "correctAnswer": 2,
+      "explanation": "Both technologies complement each other."
+    },
+    {
+      "id": "q5",
+      "type": "misconception",
+      "question": "WebAssembly code executes as JavaScript text.",
+      "options": ["True", "False", "Sometimes", "Depends"],
+      "correctAnswer": 1,
+      "explanation": "WebAssembly uses binary instructions."
+    }
+  ]
+}

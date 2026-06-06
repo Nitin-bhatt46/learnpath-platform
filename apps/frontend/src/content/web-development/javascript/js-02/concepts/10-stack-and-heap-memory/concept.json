@@ -1,0 +1,93 @@
+{
+  "id": "10-stack-and-heap-memory",
+  "title": "Stack Memory and Heap Memory",
+  "estimatedMinutes": 3,
+  "learningObjectives": [
+    "Understand stack memory",
+    "Understand heap memory",
+    "Learn where JavaScript stores data"
+  ],
+  "image": "./image.png",
+  "content": {
+    "explanation": "JavaScript uses different memory areas to store data efficiently. Stack memory is fast and organized, making it suitable for storing primitive values such as numbers, booleans, and strings. Each variable gets its own memory location, allowing quick access and cleanup. Heap memory is used for storing complex data such as objects, arrays, and functions. Unlike the stack, the heap is dynamic and can grow as needed. Variables stored on the stack often contain references that point to actual objects living in the heap. This separation improves performance and flexibility. Understanding stack and heap memory helps explain behaviors such as object sharing, reference copying, and garbage collection. Although JavaScript engines manage memory automatically, developers who understand these concepts write more efficient and predictable programs.",
+    "example": "A number like 100 is typically stored as a primitive value, while a user object containing multiple properties is stored in heap memory.",
+    "analogy": "Think of the stack as a bookshelf with neatly organized books, while the heap is a large storage room where bigger items are kept.",
+    "keyTakeaway": "Primitives are typically stored directly, while complex objects live in heap memory."
+  },
+  "tags": [
+    "Memory",
+    "Stack",
+    "Heap",
+    "JavaScript",
+    "Storage"
+  ],
+  "category": "Memory Management",
+  "revisionSummary": "Stack stores primitives, heap stores objects.",
+  "mcqs": [
+    {
+      "id": "q1",
+      "type": "definition",
+      "question": "What is stack memory commonly used for in JavaScript?",
+      "options": [
+        "Storing databases",
+        "Storing primitive values",
+        "Running servers",
+        "Rendering HTML"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Primitive values are typically stored directly in stack memory."
+    },
+    {
+      "id": "q2",
+      "type": "understanding",
+      "question": "Why is heap memory needed?",
+      "options": [
+        "To store complex and dynamic data",
+        "To create browsers",
+        "To compile code",
+        "To increase internet speed"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Objects, arrays, and functions require dynamic memory allocation."
+    },
+    {
+      "id": "q3",
+      "type": "application",
+      "question": "Which value is most likely stored in heap memory?",
+      "options": [
+        "42",
+        "true",
+        "{ name: 'Nitin' }",
+        "'Hello'"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Objects are stored in heap memory."
+    },
+    {
+      "id": "q4",
+      "type": "scenario",
+      "question": "A developer creates a large array containing thousands of items. Which memory area primarily stores it?",
+      "options": [
+        "CPU Cache",
+        "Stack",
+        "Heap",
+        "ROM"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Large and dynamic structures are stored in heap memory."
+    },
+    {
+      "id": "q5",
+      "type": "misconception",
+      "question": "All JavaScript values are stored in stack memory.",
+      "options": [
+        "True",
+        "False",
+        "Sometimes",
+        "Only in Node.js"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Objects, arrays, and functions are stored in heap memory."
+    }
+  ]
+}

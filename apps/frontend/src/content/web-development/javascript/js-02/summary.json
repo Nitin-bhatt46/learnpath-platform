@@ -1,0 +1,66 @@
+{
+  "quickRevision": [
+    {
+      "title": "JavaScript Runtime",
+      "summary": "V8 converts JavaScript into machine instructions."
+    },
+    {
+      "title": "Compiler Bootstrapping",
+      "summary": "Compilers can eventually compile themselves."
+    },
+    {
+      "title": "Node.js",
+      "summary": "Node.js runs JavaScript outside browsers."
+    },
+    {
+      "title": "WebAssembly Intro",
+      "summary": "WebAssembly enables high-performance browser applications."
+    },
+    {
+      "title": "WebAssembly Execution",
+      "summary": "JS and WASM reach machine code differently."
+    },
+    {
+      "title": "Data Types Foundation",
+      "summary": "Data types give meaning to memory."
+    },
+    {
+      "title": "Primitive Types",
+      "summary": "Primitive values store simple data."
+    },
+    {
+      "title": "Non Primitive Types",
+      "summary": "Objects store complex structured data."
+    },
+    {
+      "title": "Variables",
+      "summary": "Variables store and manage reusable data."
+    },
+    {
+      "title": "Memory Model",
+      "summary": "Stack and heap manage program memory."
+    },
+    {
+      "title": "Value vs Reference",
+      "summary": "Primitives copy values, objects copy references."
+    },
+    {
+      "title": "typeof",
+      "summary": "typeof identifies runtime data types."
+    }
+  ],
+  "flow": [
+    "JavaScript Runtime",
+    "Compiler Bootstrapping",
+    "Node.js",
+    "WebAssembly Introduction",
+    "WebAssembly Execution",
+    "Data Types Foundation",
+    "Primitive Data Types",
+    "Non Primitive Data Types",
+    "Variables",
+    "Memory Model",
+    "Value vs Reference",
+    "typeof Operator"
+  ]
+}

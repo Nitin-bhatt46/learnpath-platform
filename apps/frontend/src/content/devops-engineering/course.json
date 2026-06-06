@@ -1,0 +1,12 @@
+{
+  "title": "DevOps Engineering",
+  "description": "Automate infrastructure, manage cloud environments, and establish robust CI/CD pipelines.",
+  "duration": "10 Weeks",
+  "projectsCount": 3,
+  "difficulty": "Intermediate to Advanced",
+  "skillsIncluded": ["Linux & Bash", "Docker & Kubernetes", "Terraform (IaC)", "GitHub Actions (CI/CD)", "AWS / GCP Cloud", "Prometheus & Grafana"],
+  "levelIndicator": "Intermediate → Advanced",
+  "order": 5,
+  "roadmapOverview": ["Linux & Bash", "Networking", "Containers (Docker)", "Orchestration (K8s)", "IaC (Terraform)", "CI/CD Automations"],
+  "comingSoon": true
+}

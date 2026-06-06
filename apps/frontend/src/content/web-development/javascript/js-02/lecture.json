@@ -1,0 +1,21 @@
+{
+  "id": "js-class-02",
+  "title": "JavaScript Runtime, WebAssembly, Data Types and Memory",
+  "description": "Learn how JavaScript executes, how Node.js and WebAssembly work, and understand variables, data types, memory and typeof.",
+  "estimatedMinutes": 36,
+  "difficulty": "Beginner",
+  "conceptOrder": [
+    "01-javascript-runtime",
+    "02-compiler-bootstrapping",
+    "03-nodejs-runtime",
+    "04-webassembly-introduction",
+    "05-webassembly-execution",
+    "06-data-types-foundation",
+    "07-primitive-data-types",
+    "08-non-primitive-data-types",
+    "09-variables-let-var-const",
+    "10-stack-and-heap-memory",
+    "11-value-vs-reference",
+    "12-typeof-operator"
+  ]
+}

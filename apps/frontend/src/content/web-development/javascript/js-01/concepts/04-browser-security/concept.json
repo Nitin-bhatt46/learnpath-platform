@@ -1,0 +1,23 @@
+{
+  "id": "04-browser-security",
+  "title": "Sandboxing and Browser Security",
+  "estimatedMinutes": 3,
+  "learningObjectives": ["Understand sandboxing","Learn browser restrictions","Recognize security threats"],
+  "image": "./image.png",
+  "content": {
+    "explanation": "JavaScript runs inside a sandbox, which is a restricted environment controlled by the browser. This prevents websites from directly reading files, executing operating system commands, or accessing hardware resources without permission. Sandboxing protects users from malicious websites and helps isolate websites from each other.",
+    "example": "JavaScript cannot freely browse your hard drive and read personal documents.",
+    "analogy": "A sandbox lets children play safely within boundaries.",
+    "keyTakeaway": "Sandboxing protects users from untrusted code."
+  },
+  "tags": ["Sandbox","Security","Browser"],
+  "category": "Browser Fundamentals",
+  "revisionSummary": "Sandboxing limits dangerous access.",
+  "mcqs": [
+    {"id":"q1","type":"definition","question":"What is sandboxing?","options":["Database","Restricted execution environment","Compiler","Framework"],"correctAnswer":1,"explanation":"Sandboxing restricts access."},
+    {"id":"q2","type":"understanding","question":"Why is sandboxing important?","options":["Faster graphics","User protection","More RAM","Smaller screens"],"correctAnswer":1,"explanation":"It improves security."},
+    {"id":"q3","type":"application","question":"Can JavaScript directly delete arbitrary files?","options":["Yes","No","Sometimes","Only Linux"],"correctAnswer":1,"explanation":"Sandbox restrictions prevent this."},
+    {"id":"q4","type":"scenario","question":"A website tries to run OS commands. What happens?","options":["Runs immediately","Blocked","Downloads compiler","Formats disk"],"correctAnswer":1,"explanation":"Browsers block such actions."},
+    {"id":"q5","type":"misconception","question":"JavaScript has unrestricted hardware access.","options":["True","False","Sometimes","Depends"],"correctAnswer":1,"explanation":"Access is restricted."}
+  ]
+}

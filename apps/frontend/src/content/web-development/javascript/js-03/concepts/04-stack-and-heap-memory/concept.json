@@ -1,0 +1,93 @@
+{
+  "id": "04-stack-and-heap-memory",
+  "title": "Stack Memory and Heap Memory",
+  "estimatedMinutes": 3,
+  "learningObjectives": [
+    "Understand stack memory",
+    "Understand heap memory",
+    "Learn how references connect stack and heap"
+  ],
+  "image": "./image.png",
+  "content": {
+    "explanation": "JavaScript uses two conceptual memory regions: stack memory and heap memory. Stack memory is fast, organized, and used to store primitive values, function calls, and references to objects. Heap memory is larger and more flexible, making it suitable for storing objects, arrays, functions, and other complex data structures. When an object is created, the actual object is stored in heap memory, while a reference to that object is stored in stack memory. This design allows JavaScript to efficiently manage memory without repeatedly copying large objects. Accessing stack memory is generally faster because its structure is simple and predictable. Heap memory provides flexibility for dynamically sized data but requires additional management. Understanding the relationship between stack and heap memory is important because it explains reference behavior, object sharing, garbage collection, and many debugging scenarios developers encounter in real applications.",
+    "example": "When you create let user = { name: 'Rahul' }, the object lives in heap memory while the variable user stores a reference to it in stack memory.",
+    "analogy": "The stack is like an index card containing a storage room number, while the heap is the storage room containing the actual items.",
+    "keyTakeaway": "Stack stores references and primitives, while heap stores complex objects."
+  },
+  "tags": [
+    "Stack",
+    "Heap",
+    "Memory",
+    "Reference",
+    "JavaScript"
+  ],
+  "category": "Memory Management",
+  "revisionSummary": "Stack stores references; heap stores objects.",
+  "mcqs": [
+    {
+      "id": "q1",
+      "type": "definition",
+      "question": "What is heap memory primarily used for?",
+      "options": [
+        "CPU instructions",
+        "Objects and complex data",
+        "Internet connections",
+        "HTML rendering"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Heap memory stores objects, arrays, functions, and other complex structures."
+    },
+    {
+      "id": "q2",
+      "type": "understanding",
+      "question": "Why are objects stored in heap memory?",
+      "options": [
+        "Objects require flexible dynamic storage",
+        "Objects are always small",
+        "Heap is faster than stack",
+        "Browsers require it"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Objects vary in size and need flexible memory allocation."
+    },
+    {
+      "id": "q3",
+      "type": "application",
+      "question": "When creating an object, what is stored in the stack?",
+      "options": [
+        "Entire object",
+        "Machine code",
+        "Object reference",
+        "Browser cache"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The stack stores a reference pointing to the object in heap memory."
+    },
+    {
+      "id": "q4",
+      "type": "scenario",
+      "question": "A developer creates a large array with thousands of elements. Where is the array primarily stored?",
+      "options": [
+        "CPU Registers",
+        "Stack Memory",
+        "Heap Memory",
+        "ROM"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Large and dynamic structures are stored in heap memory."
+    },
+    {
+      "id": "q5",
+      "type": "misconception",
+      "question": "The entire object is copied into stack memory whenever a variable references it.",
+      "options": [
+        "True",
+        "False",
+        "Only for arrays",
+        "Only in Node.js"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The stack stores only the reference, while the actual object remains in heap memory."
+    }
+  ]
+}

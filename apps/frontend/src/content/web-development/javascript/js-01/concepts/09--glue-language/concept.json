@@ -1,0 +1,23 @@
+{
+  "id": "09-glue-language",
+  "title": "JavaScript as a Glue Language",
+  "estimatedMinutes": 3,
+  "learningObjectives": ["Understand glue code","Connect UI and logic","Learn browser architecture"],
+  "image": "./image.png",
+  "content": {
+    "explanation": "Netscape viewed browser tasks in two categories: heavy computation and lightweight interactions. JavaScript was created as a glue language that connects buttons, forms, events, and business logic. It acts as the communication layer that ties user interfaces to application behavior.",
+    "example": "A button click triggers JavaScript, which then executes business logic.",
+    "analogy": "Glue holds different parts together without being the object itself.",
+    "keyTakeaway": "JavaScript connects interfaces with functionality."
+  },
+  "tags": ["Glue Code","Events","DOM"],
+  "category": "Browser Fundamentals",
+  "revisionSummary": "JavaScript connects UI and logic.",
+  "mcqs": [
+    {"id":"q1","type":"definition","question":"What is glue code?","options":["Database","Connection logic","Compiler","Browser"],"correctAnswer":1,"explanation":"Glue code connects components."},
+    {"id":"q2","type":"understanding","question":"Why was a glue language needed?","options":["Storage","Lightweight interactions","Hardware","Networking"],"correctAnswer":1,"explanation":"Pages needed simple scripting."},
+    {"id":"q3","type":"application","question":"Which action is glue work?","options":["Kernel design","Button click handling","CPU design","File system"],"correctAnswer":1,"explanation":"UI events are glue tasks."},
+    {"id":"q4","type":"scenario","question":"A form triggers validation after typing. What role is JavaScript playing?","options":["Database","Glue language","Compiler","OS"],"correctAnswer":1,"explanation":"It connects events and logic."},
+    {"id":"q5","type":"misconception","question":"JavaScript was created to replace Java.","options":["True","False","Partly","Unknown"],"correctAnswer":1,"explanation":"It was created to complement it."}
+  ]
+}

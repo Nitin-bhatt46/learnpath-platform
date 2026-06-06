@@ -1,0 +1,11 @@
+{
+  "title": "Full Stack Web Development",
+  "description": "Master frontend, backend, databases, DevOps and system design through a structured learning journey.",
+  "duration": "12 Weeks",
+  "projectsCount": 5,
+  "difficulty": "Beginner to Advanced",
+  "skillsIncluded": ["HTML & CSS", "JavaScript", "React & Next.js", "Node.js & Express", "PostgreSQL", "CI/CD"],
+  "levelIndicator": "Beginner → Advanced",
+  "order": 1,
+  "roadmapOverview": ["Frontend", "Backend", "Database", "DevOps", "System Design", "Projects"]
+}

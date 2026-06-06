@@ -1,0 +1,21 @@
+{
+  "id": "js-class-03",
+  "title": "JavaScript Values, Memory and Operators",
+  "description": "Understand primitive and non-primitive values, memory behavior, references, copying, and JavaScript operators.",
+  "estimatedMinutes": 36,
+  "difficulty": "Beginner",
+  "conceptOrder": [
+    "01-primitive-vs-non-primitive",
+    "02-primitive-characteristics",
+    "03-object-reference-model",
+    "04-stack-and-heap-memory",
+    "05-object-comparison",
+    "06-shallow-vs-deep-copy",
+    "07-introduction-to-operators",
+    "08-assignment-operators",
+    "09-arithmetic-operators",
+    "10-comparison-operators",
+    "11-logical-operators",
+    "12-operator-precedence"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "title": "AI Engineering",
+  "description": "Integrate Large Language Models, build RAG applications, fine-tune models, and deploy autonomous AI agents.",
+  "duration": "8 Weeks",
+  "projectsCount": 3,
+  "difficulty": "Intermediate to Advanced",
+  "skillsIncluded": ["Python", "OpenAI & Open-Source LLMs", "LangChain & LlamaIndex", "Vector Databases", "Prompt Engineering", "Model Deployment"],
+  "levelIndicator": "Intermediate → Advanced",
+  "order": 3,
+  "roadmapOverview": ["Python Basics", "LLMs & APIs", "Vector Database", "RAG Pipeline", "AI Agents", "Model Deployment"],
+  "comingSoon": true
+}

@@ -1,0 +1,93 @@
+{
+  "id": "11-comparison-and-equality",
+  "title": "Equality Comparison: == vs ===",
+  "estimatedMinutes": 4,
+  "learningObjectives": [
+    "Understand equality operators",
+    "Differentiate strict and loose equality",
+    "Avoid coercion-related bugs"
+  ],
+  "image": "./image.png",
+  "content": {
+    "explanation": "Comparison is the foundation of decision-making in programming. JavaScript provides two main equality systems: strict equality (===) and loose equality (==). Strict equality compares both type and value. If the types differ, the result is immediately false. Loose equality behaves differently because JavaScript attempts automatic type conversion before comparing values. This process is called coercion. For example, '7' == 7 returns true because JavaScript converts the string into a number before comparison. While this may seem helpful, it often creates confusing behavior and unexpected bugs. Because of this, professional JavaScript developers strongly prefer === and !== for most comparisons. Strict equality produces predictable results and avoids hidden conversions. Understanding the difference between these operators is essential for writing reliable code, passing interviews, and avoiding difficult debugging sessions.",
+    "example": "10 === '10' returns false because the types differ, while 10 == '10' returns true because JavaScript converts the string to a number.",
+    "analogy": "Strict equality is like checking both a person's identity card and name. Loose equality only checks whether they can be interpreted as matching.",
+    "keyTakeaway": "Use === and !== because they compare both type and value without coercion."
+  },
+  "tags": [
+    "Comparison",
+    "Equality",
+    "Coercion",
+    "Strict Equality",
+    "JavaScript"
+  ],
+  "category": "JavaScript Fundamentals",
+  "revisionSummary": "Prefer === over == to avoid coercion surprises.",
+  "mcqs": [
+    {
+      "id": "q1",
+      "type": "definition",
+      "question": "What does strict equality (===) compare?",
+      "options": [
+        "Only values",
+        "Only types",
+        "Both type and value",
+        "Object properties"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Strict equality requires both the type and the value to match."
+    },
+    {
+      "id": "q2",
+      "type": "understanding",
+      "question": "Why is === generally recommended over == ?",
+      "options": [
+        "It is shorter",
+        "It avoids automatic type coercion",
+        "It uses less memory",
+        "It only works with numbers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Strict equality avoids unexpected conversions and produces predictable results."
+    },
+    {
+      "id": "q3",
+      "type": "application",
+      "question": "What is the result of '10' === 10?",
+      "options": [
+        "true",
+        "false",
+        "undefined",
+        "NaN"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The values are similar, but the types are different."
+    },
+    {
+      "id": "q4",
+      "type": "scenario",
+      "question": "A login system requires exact matches without automatic conversions. Which operator should be used?",
+      "options": [
+        "==",
+        "!=",
+        "===",
+        "<="
+      ],
+      "correctAnswer": 2,
+      "explanation": "Strict equality ensures both type and value match exactly."
+    },
+    {
+      "id": "q5",
+      "type": "misconception",
+      "question": "The operators == and === always produce the same result.",
+      "options": [
+        "True",
+        "False",
+        "Only for strings",
+        "Only for booleans"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Loose equality performs coercion while strict equality does not."
+    }
+  ]
+}

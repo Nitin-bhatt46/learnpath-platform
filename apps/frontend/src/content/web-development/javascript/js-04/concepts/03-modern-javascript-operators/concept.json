@@ -1,0 +1,93 @@
+{
+  "id": "03-modern-javascript-operators",
+  "title": "Modern JavaScript Operators",
+  "estimatedMinutes": 3,
+  "learningObjectives": [
+    "Understand nullish coalescing",
+    "Learn optional chaining",
+    "Recognize spread and destructuring usage"
+  ],
+  "image": "./image.png",
+  "content": {
+    "explanation": "Modern JavaScript introduced several powerful operators that make code safer and more expressive. The nullish coalescing operator (??) provides a default value only when the left side is null or undefined. This differs from the logical OR operator, which treats many other values such as 0 and empty strings as missing. Optional chaining (?.) safely accesses nested properties without causing runtime errors if an intermediate value is null or undefined. The spread operator (...) expands arrays, objects, or function arguments, making copying and merging data much easier. Destructuring assignment extracts values from objects and arrays into variables using a concise syntax. JavaScript also includes logical assignment operators such as &&=, ||=, and ??=, which combine logical evaluation and assignment. These modern operators reduce boilerplate code, improve readability, and are heavily used in professional JavaScript development.",
+    "example": "const name = user?.profile?.name ?? 'Guest'; safely accesses nested properties and provides a fallback value when needed.",
+    "analogy": "Optional chaining is like checking every door before entering a room, while nullish coalescing is like using a backup key only when the main key is missing.",
+    "keyTakeaway": "Modern operators make JavaScript code safer, shorter, and easier to maintain."
+  },
+  "tags": [
+    "Optional Chaining",
+    "Nullish Coalescing",
+    "Spread",
+    "Destructuring",
+    "JavaScript"
+  ],
+  "category": "JavaScript Fundamentals",
+  "revisionSummary": "Modern operators simplify safe access and data handling.",
+  "mcqs": [
+    {
+      "id": "q1",
+      "type": "definition",
+      "question": "What does the nullish coalescing operator (??) do?",
+      "options": [
+        "Performs multiplication",
+        "Provides a default value for null or undefined",
+        "Creates objects",
+        "Compares references"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The ?? operator returns the right value only when the left side is null or undefined."
+    },
+    {
+      "id": "q2",
+      "type": "understanding",
+      "question": "Why is optional chaining useful?",
+      "options": [
+        "It improves internet speed",
+        "It prevents errors when accessing nested properties",
+        "It converts strings to numbers",
+        "It creates arrays automatically"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Optional chaining safely stops property access when a value is null or undefined."
+    },
+    {
+      "id": "q3",
+      "type": "application",
+      "question": "What is the result of:\nlet name = null ?? 'Guest';",
+      "options": [
+        "null",
+        "undefined",
+        "Guest",
+        "Error"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The fallback value is returned because the left side is null."
+    },
+    {
+      "id": "q4",
+      "type": "scenario",
+      "question": "An API may or may not return a profile object. Which operator helps safely access user.profile.name?",
+      "options": [
+        "===",
+        "&&",
+        "?.",
+        "+"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Optional chaining prevents crashes when intermediate properties are missing."
+    },
+    {
+      "id": "q5",
+      "type": "misconception",
+      "question": "The spread operator (...) only works with arrays.",
+      "options": [
+        "True",
+        "False",
+        "Only in Node.js",
+        "Only in browsers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The spread operator can be used with arrays, objects, and function arguments."
+    }
+  ]
+}

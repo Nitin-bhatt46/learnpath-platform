@@ -1,0 +1,93 @@
+{
+  "id": "02-typeof-and-ternary",
+  "title": "The typeof Operator and Ternary Operator",
+  "estimatedMinutes": 3,
+  "learningObjectives": [
+    "Understand the typeof operator",
+    "Learn JavaScript type inspection",
+    "Use the ternary operator for conditional expressions"
+  ],
+  "image": "./image.png",
+  "content": {
+    "explanation": "JavaScript provides special operators that help developers inspect values and write concise decision-making logic. The typeof operator returns the type of a value as a string. It is commonly used for debugging, validation, and handling dynamic data. For example, typeof 42 returns 'number' and typeof 'hello' returns 'string'. Two famous JavaScript quirks are typeof null returning 'object' and typeof NaN returning 'number'. These behaviors exist because of historical implementation decisions and backward compatibility requirements. Another important operator is the ternary operator, which provides a compact alternative to if-else statements. It follows the pattern condition ? valueIfTrue : valueIfFalse. The ternary operator improves readability for simple decisions and is widely used in modern JavaScript applications, especially in UI rendering and conditional assignments.",
+    "example": "let status = age >= 18 ? 'Adult' : 'Minor'; assigns a value based on a condition in a single line.",
+    "analogy": "The typeof operator is like checking a product label, while the ternary operator is like choosing one of two doors based on a rule.",
+    "keyTakeaway": "typeof identifies value types, and the ternary operator provides concise conditional logic."
+  },
+  "tags": [
+    "typeof",
+    "Ternary",
+    "Operators",
+    "Conditions",
+    "JavaScript"
+  ],
+  "category": "JavaScript Fundamentals",
+  "revisionSummary": "typeof checks types; ternary simplifies decisions.",
+  "mcqs": [
+    {
+      "id": "q1",
+      "type": "definition",
+      "question": "What does the typeof operator return?",
+      "options": [
+        "A number",
+        "A boolean",
+        "A string describing the type",
+        "An object"
+      ],
+      "correctAnswer": 2,
+      "explanation": "typeof always returns a string representing the detected type."
+    },
+    {
+      "id": "q2",
+      "type": "understanding",
+      "question": "Why is the ternary operator useful?",
+      "options": [
+        "It creates objects",
+        "It replaces simple if-else expressions",
+        "It converts types",
+        "It stores variables"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The ternary operator provides a concise alternative to simple conditional statements."
+    },
+    {
+      "id": "q3",
+      "type": "application",
+      "question": "What is the output of typeof NaN?",
+      "options": [
+        "nan",
+        "undefined",
+        "object",
+        "number"
+      ],
+      "correctAnswer": 3,
+      "explanation": "NaN is considered part of JavaScript's Number type."
+    },
+    {
+      "id": "q4",
+      "type": "scenario",
+      "question": "A developer wants to assign 'Pass' when marks are at least 40 and 'Fail' otherwise. Which operator is ideal?",
+      "options": [
+        "typeof",
+        "instanceof",
+        "ternary",
+        "delete"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The ternary operator is perfect for simple conditional assignments."
+    },
+    {
+      "id": "q5",
+      "type": "misconception",
+      "question": "typeof null returns 'null'.",
+      "options": [
+        "True",
+        "False",
+        "Only in strict mode",
+        "Only in Node.js"
+      ],
+      "correctAnswer": 1,
+      "explanation": "typeof null returns 'object' due to a historical JavaScript quirk."
+    }
+  ]
+}

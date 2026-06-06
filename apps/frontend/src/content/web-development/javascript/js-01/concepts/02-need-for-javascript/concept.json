@@ -1,0 +1,23 @@
+{
+  "id": "02-need-for-javascript",
+  "title": "Why JavaScript Is Needed",
+  "estimatedMinutes": 3,
+  "learningObjectives": ["Understand limitations of HTML and CSS","Learn browser-side logic","Recognize dynamic behavior"],
+  "image": "./image.png",
+  "content": {
+    "explanation": "HTML can display information and CSS can style it, but neither can make decisions, validate user input, perform calculations, or communicate intelligently with servers. JavaScript fills this gap. It allows websites to validate forms, update content dynamically, call APIs, and react instantly to user actions. This ability transformed websites from static documents into interactive applications.",
+    "example": "JavaScript checks whether an email address contains required characters before sending data to a server.",
+    "analogy": "HTML is the body, CSS is clothing, and JavaScript is the brain.",
+    "keyTakeaway": "JavaScript provides logic and interactivity."
+  },
+  "tags": ["Logic","Validation","Interactivity"],
+  "category": "JavaScript Fundamentals",
+  "revisionSummary": "JavaScript enables logic and interaction.",
+  "mcqs": [
+    {"id":"q1","type":"definition","question":"What does JavaScript primarily add to webpages?","options":["Storage","Behavior","Structure","Hosting"],"correctAnswer":1,"explanation":"JavaScript adds behavior."},
+    {"id":"q2","type":"understanding","question":"Why can't CSS validate a form?","options":["It is styling-focused","Too slow","Needs database","Needs HTML"],"correctAnswer":0,"explanation":"CSS is for styling."},
+    {"id":"q3","type":"application","question":"Which technology validates an email before submission?","options":["HTML","CSS","JavaScript","PNG"],"correctAnswer":2,"explanation":"Validation is logic."},
+    {"id":"q4","type":"scenario","question":"A website updates content without reloading. Which technology is responsible?","options":["CSS","JavaScript","Image","HTML only"],"correctAnswer":1,"explanation":"Dynamic updates use JavaScript."},
+    {"id":"q5","type":"misconception","question":"CSS can perform API calls.","options":["True","False","Sometimes","Only in browsers"],"correctAnswer":1,"explanation":"API calls require programming logic."}
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "id": "04-number-systems-and-binary",
+  "title": "Number Systems and Binary Fundamentals",
+  "estimatedMinutes": 3,
+  "learningObjectives": [
+    "Understand decimal and binary number systems",
+    "Learn how computers represent numbers",
+    "Convert binary place values into decimal values"
+  ],
+  "image": "./image.png",
+  "content": {
+    "explanation": "Humans and computers use different number systems. Humans typically use the decimal system (Base 10), which contains ten digits from 0 to 9. Computers use the binary system (Base 2), which contains only two digits: 0 and 1. Every value stored in computer memory is ultimately represented using binary. In decimal, each position represents powers of 10 such as ones, tens, hundreds, and thousands. In binary, each position represents powers of 2 such as 1, 2, 4, 8, 16, and 32. To determine the decimal value of a binary number, multiply each binary digit by its place value and add the results together. Understanding binary is important because all calculations, memory storage, networking, and digital communication depend on it. Binary provides the foundation for how computers process and store information.",
+    "example": "The binary number 1101 equals 13 because (1×8) + (1×4) + (0×2) + (1×1) = 13.",
+    "analogy": "Decimal is like counting with ten different symbols, while binary is like using only two colored switches: ON and OFF.",
+    "keyTakeaway": "Computers use binary (Base 2), where each position represents a power of two."
+  },
+  "tags": [
+    "Binary",
+    "Decimal",
+    "Number Systems",
+    "Computer Science",
+    "JavaScript"
+  ],
+  "category": "Computer Fundamentals",
+  "revisionSummary": "Binary uses powers of two to represent numbers.",
+  "mcqs": [
+    {
+      "id": "q1",
+      "type": "definition",
+      "question": "Which number system do computers primarily use?",
+      "options": [
+        "Decimal",
+        "Hexadecimal",
+        "Binary",
+        "Octal"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Computers store and process information using binary digits."
+    },
+    {
+      "id": "q2",
+      "type": "understanding",
+      "question": "Why does binary use only 0 and 1?",
+      "options": [
+        "It matches human counting",
+        "Electronic circuits naturally represent two states",
+        "It saves internet bandwidth",
+        "JavaScript requires it"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Electronic hardware can efficiently represent ON/OFF states using 1 and 0."
+    },
+    {
+      "id": "q3",
+      "type": "application",
+      "question": "What decimal value does binary 101 represent?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctAnswer": 2,
+      "explanation": "101 = (1×4) + (0×2) + (1×1) = 5."
+    },
+    {
+      "id": "q4",
+      "type": "scenario",
+      "question": "A developer is learning how memory stores data. Which number system should they understand first?",
+      "options": [
+        "Roman Numerals",
+        "Decimal",
+        "Binary",
+        "Scientific Notation"
+      ],
+      "correctAnswer": 2,
+      "explanation": "All computer memory and processing are fundamentally based on binary representation."
+    },
+    {
+      "id": "q5",
+      "type": "misconception",
+      "question": "Computers internally store numbers exactly the same way humans write them.",
+      "options": [
+        "True",
+        "False",
+        "Only for integers",
+        "Only in JavaScript"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Humans use decimal notation, while computers use binary representation internally."
+    }
+  ]
+}

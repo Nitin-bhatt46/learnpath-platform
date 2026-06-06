@@ -1,0 +1,12 @@
+{
+  "title": "Data Engineering",
+  "description": "Build high-throughput data pipelines, design data warehouses, and process massive datasets.",
+  "duration": "14 Weeks",
+  "projectsCount": 4,
+  "difficulty": "Intermediate to Advanced",
+  "skillsIncluded": ["Python & SQL", "Apache Spark", "Apache Airflow", "Snowflake & BigQuery", "Kafka Streaming", "Data Modeling"],
+  "levelIndicator": "Intermediate → Advanced",
+  "order": 4,
+  "roadmapOverview": ["SQL & Python", "Data Modeling", "ETL Pipelines", "Data Warehousing", "Streaming Data", "Big Data Stack"],
+  "comingSoon": true
+}

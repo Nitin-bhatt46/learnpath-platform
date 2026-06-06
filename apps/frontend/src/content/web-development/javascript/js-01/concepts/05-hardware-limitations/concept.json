@@ -1,0 +1,23 @@
+{
+  "id": "05-hardware-limitations",
+  "title": "Early Hardware Constraints",
+  "estimatedMinutes": 3,
+  "learningObjectives": ["Understand 1990s hardware","Learn why lightweight runtimes mattered","Connect performance to adoption"],
+  "image": "./image.png",
+  "content": {
+    "explanation": "When JavaScript was created, computers had limited memory, storage, and processing power. Browsers could not afford large runtimes or heavy software stacks. A lightweight language that started quickly and consumed fewer resources was essential. JavaScript fit these requirements and could run efficiently on a wide range of systems.",
+    "example": "A browser running on 8 MB RAM could not easily support heavyweight technologies.",
+    "analogy": "Packing light is important when carrying a small backpack.",
+    "keyTakeaway": "Hardware limits encouraged lightweight browser technology."
+  },
+  "tags": ["Performance","History","Hardware"],
+  "category": "Browser Fundamentals",
+  "revisionSummary": "Old computers required lightweight software.",
+  "mcqs": [
+    {"id":"q1","type":"definition","question":"Why were hardware limitations important?","options":["More colors","Less memory available","Faster internet","Better monitors"],"correctAnswer":1,"explanation":"Resources were scarce."},
+    {"id":"q2","type":"understanding","question":"Why avoid heavy runtimes?","options":["Lower performance","More batteries","Less code","Better CSS"],"correctAnswer":0,"explanation":"Heavy runtimes consume resources."},
+    {"id":"q3","type":"application","question":"Which type of language suits limited hardware?","options":["Heavy","Lightweight","Kernel-only","GPU-only"],"correctAnswer":1,"explanation":"Lightweight tools fit better."},
+    {"id":"q4","type":"scenario","question":"A browser targets millions of low-end devices. What should it prioritize?","options":["Large runtime","Efficiency","Plugins","Complex setup"],"correctAnswer":1,"explanation":"Efficiency is crucial."},
+    {"id":"q5","type":"misconception","question":"Hardware constraints had no influence on JavaScript's design.","options":["True","False","Partially","Unknown"],"correctAnswer":1,"explanation":"They strongly influenced design."}
+  ]
+}

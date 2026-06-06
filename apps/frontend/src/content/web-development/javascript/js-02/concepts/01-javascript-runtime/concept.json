@@ -1,0 +1,62 @@
+{
+  "id": "01-javascript-runtime",
+  "title": "How JavaScript Reaches the CPU",
+  "estimatedMinutes": 3,
+  "learningObjectives": [
+    "Understand JavaScript execution",
+    "Learn the role of V8",
+    "Understand machine code"
+  ],
+  "image": "./image.png",
+  "content": {
+    "explanation": "Computers cannot directly understand JavaScript code. CPUs only execute machine instructions. JavaScript engines such as V8 act as translators between JavaScript and the processor. When JavaScript code is executed, V8 parses it, compiles it into machine instructions, and sends those instructions to the CPU. This process allows developers to write human-readable code while computers execute low-level operations efficiently.",
+    "example": "When console.log('Hello') runs in Chrome, V8 converts the instruction into machine code before execution.",
+    "analogy": "A translator converts a book from one language into another language understood by the reader.",
+    "keyTakeaway": "JavaScript must be translated before the CPU can execute it."
+  },
+  "tags": ["V8", "Runtime", "JavaScript"],
+  "category": "JavaScript Runtime",
+  "revisionSummary": "V8 converts JavaScript into machine instructions.",
+  "mcqs": [
+    {
+      "id": "q1",
+      "type": "definition",
+      "question": "What does a JavaScript engine do?",
+      "options": ["Stores files", "Translates and executes JavaScript", "Styles pages", "Creates databases"],
+      "correctAnswer": 1,
+      "explanation": "JavaScript engines execute JavaScript by translating it into machine instructions."
+    },
+    {
+      "id": "q2",
+      "type": "understanding",
+      "question": "Why can't CPUs run JavaScript directly?",
+      "options": ["JavaScript is too large", "CPU only understands machine code", "Browsers block it", "RAM is limited"],
+      "correctAnswer": 1,
+      "explanation": "CPUs execute machine instructions, not JavaScript syntax."
+    },
+    {
+      "id": "q3",
+      "type": "application",
+      "question": "Which component executes JavaScript in Chrome?",
+      "options": ["Node.js", "React", "V8", "MongoDB"],
+      "correctAnswer": 2,
+      "explanation": "Chrome uses the V8 engine."
+    },
+    {
+      "id": "q4",
+      "type": "scenario",
+      "question": "A browser receives JavaScript code. What happens first?",
+      "options": ["CPU executes text", "Engine processes it", "RAM deletes it", "OS compiles HTML"],
+      "correctAnswer": 1,
+      "explanation": "The engine must process JavaScript before execution."
+    },
+    {
+      "id": "q5",
+      "type": "misconception",
+      "question": "JavaScript code is machine code.",
+      "options": ["True", "False", "Sometimes", "Depends on browser"],
+      "correctAnswer": 1,
+      "explanation": "JavaScript must be translated into machine code."
+    }
+  ]
+}

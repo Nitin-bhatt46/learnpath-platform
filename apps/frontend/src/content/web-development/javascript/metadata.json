@@ -1,0 +1,26 @@
+{
+  "title": "JavaScript",
+  "order": 1,
+  "parts": [
+    {
+      "id": "js-01",
+      "title": "JavaScript Fundamentals",
+      "order": 1
+    },
+    {
+      "id": "js-02",
+      "title": "Runtime & Memory",
+      "order": 2
+    },
+    {
+      "id": "js-03",
+      "title": "Values & Operators",
+      "order": 3
+    },
+    {
+      "id": "js-04",
+      "title": "Functions & Objects",
+      "order": 4
+    }
+  ]
+}

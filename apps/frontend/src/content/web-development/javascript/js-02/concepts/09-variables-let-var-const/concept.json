@@ -1,0 +1,93 @@
+{
+  "id": "09-variables-let-var-const",
+  "title": "Variables, let, var and const",
+  "estimatedMinutes": 3,
+  "learningObjectives": [
+    "Understand why variables exist",
+    "Differentiate let, var and const",
+    "Learn reassignment and scope rules"
+  ],
+  "image": "./image.png",
+  "content": {
+    "explanation": "Variables allow programs to store, reuse, and update data during execution. Instead of repeating values throughout a program, developers store them in variables and access them whenever needed. JavaScript provides three ways to declare variables: var, let, and const. The modern recommendation is to use let and const. Use let when a value may change during program execution. Use const when the variable should always point to the same value or reference. Although a const variable cannot be reassigned, properties inside a const object can still be modified. The older var keyword has function scope and hoisting behavior that can lead to unexpected bugs, which is why modern JavaScript development generally avoids it. Understanding when to use each declaration type helps developers write safer and more predictable code.",
+    "example": "A shopping cart quantity may use let because the quantity changes, while an API configuration object may use const because the reference should remain fixed.",
+    "analogy": "Variables are labeled containers. Some containers can be replaced, while others are locked to always point to the same item.",
+    "keyTakeaway": "Use const by default, use let when values change, and avoid var in modern JavaScript."
+  },
+  "tags": [
+    "Variables",
+    "let",
+    "const",
+    "var",
+    "Scope"
+  ],
+  "category": "JavaScript Fundamentals",
+  "revisionSummary": "Prefer const, use let for changes, avoid var.",
+  "mcqs": [
+    {
+      "id": "q1",
+      "type": "definition",
+      "question": "What is the primary purpose of a variable?",
+      "options": [
+        "Style webpages",
+        "Store and reuse data",
+        "Compile code",
+        "Create browsers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Variables store values that can be reused throughout a program."
+    },
+    {
+      "id": "q2",
+      "type": "understanding",
+      "question": "When should let be used instead of const?",
+      "options": [
+        "When the value changes",
+        "When storing text",
+        "When using arrays",
+        "When creating functions"
+      ],
+      "correctAnswer": 0,
+      "explanation": "let is used when reassignment is expected."
+    },
+    {
+      "id": "q3",
+      "type": "application",
+      "question": "Which declaration is most appropriate for a shopping cart quantity that changes?",
+      "options": [
+        "const",
+        "let",
+        "symbol",
+        "null"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The quantity changes, so let is appropriate."
+    },
+    {
+      "id": "q4",
+      "type": "scenario",
+      "question": "A developer creates const user = { name: 'John' }; and later changes user.name. What happens?",
+      "options": [
+        "JavaScript throws an error",
+        "The property changes successfully",
+        "The object is deleted",
+        "The variable becomes undefined"
+      ],
+      "correctAnswer": 1,
+      "explanation": "const prevents reassignment of the reference, not modification of object properties."
+    },
+    {
+      "id": "q5",
+      "type": "misconception",
+      "question": "A const object can never be modified.",
+      "options": [
+        "True",
+        "False",
+        "Only in Node.js",
+        "Only in strict mode"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Object properties can still be modified even when the reference is declared with const."
+    }
+  ]
+}

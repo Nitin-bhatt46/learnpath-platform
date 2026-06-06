@@ -1,0 +1,12 @@
+{
+  "title": "Backend Engineering",
+  "description": "Design scalable APIs, master relational and non-relational databases, caching, and server architecture.",
+  "duration": "10 Weeks",
+  "projectsCount": 4,
+  "difficulty": "Intermediate to Advanced",
+  "skillsIncluded": ["Node.js", "Go / Python", "SQL & NoSQL", "System Design", "Docker & Kubernetes", "Redis & Message Queues"],
+  "levelIndicator": "Intermediate → Advanced",
+  "order": 2,
+  "roadmapOverview": ["Language", "API Design", "Databases", "Caching", "DevOps", "System Design"],
+  "comingSoon": true
+}

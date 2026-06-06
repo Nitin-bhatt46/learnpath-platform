@@ -1,0 +1,93 @@
+{
+  "id": "12-operator-precedence",
+  "title": "Operator Precedence and Evaluation Order",
+  "estimatedMinutes": 3,
+  "learningObjectives": [
+    "Understand operator precedence",
+    "Predict expression evaluation order",
+    "Use parentheses to control execution"
+  ],
+  "image": "./image.png",
+  "content": {
+    "explanation": "When an expression contains multiple operators, JavaScript must decide which operation to perform first. This decision is controlled by operator precedence. Operators with higher precedence are evaluated before operators with lower precedence. For example, multiplication is performed before addition, so 5 + 2 * 3 evaluates to 11 rather than 21. Parentheses have the highest practical priority because they explicitly tell JavaScript what to evaluate first. Understanding precedence helps developers avoid unexpected results and write more readable code. A common precedence order is: parentheses, unary operators, arithmetic operators, comparison operators, and finally logical operators. Although JavaScript follows strict rules, relying entirely on precedence can make code difficult to understand. Using parentheses improves clarity and reduces bugs, especially in complex expressions involving arithmetic, comparisons, and logical conditions.",
+    "example": "5 + 2 * 3 returns 11 because multiplication happens before addition. (5 + 2) * 3 returns 21 because parentheses change the order.",
+    "analogy": "Operator precedence is like following the order of steps in a recipe. Some actions must happen before others to get the correct result.",
+    "keyTakeaway": "Parentheses provide the clearest way to control evaluation order."
+  },
+  "tags": [
+    "Precedence",
+    "Expressions",
+    "Operators",
+    "Evaluation",
+    "JavaScript"
+  ],
+  "category": "JavaScript Fundamentals",
+  "revisionSummary": "Precedence determines the order of expression evaluation.",
+  "mcqs": [
+    {
+      "id": "q1",
+      "type": "definition",
+      "question": "What is operator precedence?",
+      "options": [
+        "The speed of an operator",
+        "The order in which operators are evaluated",
+        "The size of an expression",
+        "The number of operands"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Operator precedence determines which operation executes first."
+    },
+    {
+      "id": "q2",
+      "type": "understanding",
+      "question": "Why are parentheses important in expressions?",
+      "options": [
+        "They increase memory",
+        "They change evaluation order",
+        "They create variables",
+        "They improve network speed"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Parentheses explicitly control which operations execute first."
+    },
+    {
+      "id": "q3",
+      "type": "application",
+      "question": "What is the result of:\n5 + 2 * 3",
+      "options": [
+        "21",
+        "11",
+        "15",
+        "7"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Multiplication has higher precedence than addition."
+    },
+    {
+      "id": "q4",
+      "type": "scenario",
+      "question": "A developer wants addition to occur before multiplication. What should they do?",
+      "options": [
+        "Use ===",
+        "Use &&",
+        "Use parentheses",
+        "Use typeof"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Parentheses override normal precedence rules."
+    },
+    {
+      "id": "q5",
+      "type": "misconception",
+      "question": "JavaScript evaluates operators strictly from left to right regardless of operator type.",
+      "options": [
+        "True",
+        "False",
+        "Only for arithmetic",
+        "Only in browsers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "JavaScript follows precedence rules, not simple left-to-right evaluation."
+    }
+  ]
+}

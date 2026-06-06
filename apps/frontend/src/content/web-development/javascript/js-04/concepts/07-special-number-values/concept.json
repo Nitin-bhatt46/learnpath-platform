@@ -1,0 +1,93 @@
+{
+  "id": "06-floating-point-precision",
+  "title": "Floating Point Precision and Decimal Errors",
+  "estimatedMinutes": 4,
+  "learningObjectives": [
+    "Understand why decimal precision issues occur",
+    "Learn why 0.1 + 0.2 is not exactly 0.3",
+    "Apply common solutions for floating-point problems"
+  ],
+  "image": "./image.png",
+  "content": {
+    "explanation": "One of the most famous JavaScript behaviors is that 0.1 + 0.2 produces 0.30000000000000004 instead of exactly 0.3. This happens because computers store numbers in binary, not decimal. Some decimal values, such as 0.1 and 0.2, cannot be represented exactly in binary form. Instead, JavaScript stores approximations of these values using the IEEE-754 floating-point format. When approximated values are added together, tiny rounding errors can accumulate and appear in the final result. This is not a bug in JavaScript but a limitation of binary floating-point arithmetic used by most programming languages. Developers commonly solve these issues using rounding techniques such as toFixed(), Math.round(), or Number.EPSILON. In financial systems, developers often avoid floating-point arithmetic entirely and store monetary values as integers representing the smallest currency unit, such as cents or paise.",
+    "example": "0.1 + 0.2 returns 0.30000000000000004 because both decimal values are stored as binary approximations.",
+    "analogy": "Imagine trying to draw a perfect circle using square blocks. The result can only be an approximation, not a perfect circle.",
+    "keyTakeaway": "Floating-point errors occur because many decimal values cannot be represented exactly in binary."
+  },
+  "tags": [
+    "Floating Point",
+    "Precision",
+    "IEEE754",
+    "Number.EPSILON",
+    "JavaScript"
+  ],
+  "category": "JavaScript Number System",
+  "revisionSummary": "Binary approximations cause decimal precision errors.",
+  "mcqs": [
+    {
+      "id": "q1",
+      "type": "definition",
+      "question": "Why does 0.1 + 0.2 not equal exactly 0.3 in JavaScript?",
+      "options": [
+        "JavaScript contains a math bug",
+        "Computers use binary approximations for many decimals",
+        "Addition is inaccurate",
+        "Numbers are stored as strings"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Many decimal values cannot be represented exactly in binary, leading to small rounding errors."
+    },
+    {
+      "id": "q2",
+      "type": "understanding",
+      "question": "What is the main cause of floating-point precision issues?",
+      "options": [
+        "Slow CPUs",
+        "Memory leaks",
+        "Binary representation limitations",
+        "Browser differences"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Some decimal values become repeating binary fractions and must be approximated."
+    },
+    {
+      "id": "q3",
+      "type": "application",
+      "question": "Which expression is commonly used to compare floating-point values safely?",
+      "options": [
+        "0.1 + 0.2 === 0.3",
+        "Math.abs((0.1 + 0.2) - 0.3) < Number.EPSILON",
+        "typeof(0.1 + 0.2)",
+        "parseFloat(0.3)"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Using Number.EPSILON helps account for tiny floating-point inaccuracies."
+    },
+    {
+      "id": "q4",
+      "type": "scenario",
+      "question": "A banking application stores money as integer cents instead of decimal values. Why?",
+      "options": [
+        "Integers use less memory",
+        "To avoid floating-point precision errors",
+        "Banks cannot use decimals",
+        "JavaScript does not support decimals"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Financial systems often use integer arithmetic to avoid rounding problems."
+    },
+    {
+      "id": "q5",
+      "type": "misconception",
+      "question": "The result 0.30000000000000004 means JavaScript arithmetic is broken.",
+      "options": [
+        "True",
+        "False",
+        "Only in Chrome",
+        "Only for decimal numbers larger than 1"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This behavior is a normal consequence of IEEE-754 floating-point representation."
+    }
+  ]
+}

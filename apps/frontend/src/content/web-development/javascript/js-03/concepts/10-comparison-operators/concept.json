@@ -1,0 +1,93 @@
+{
+  "id": "10-comparison-operators",
+  "title": "Comparison Operators",
+  "estimatedMinutes": 3,
+  "learningObjectives": [
+    "Understand comparison operators",
+    "Learn equality and inequality checks",
+    "Understand strict vs loose equality"
+  ],
+  "image": "./image.png",
+  "content": {
+    "explanation": "Comparison operators are used to compare values and produce a boolean result: either true or false. They help programs make decisions by answering questions such as 'Is this value larger?', 'Are these values equal?', or 'Are these values different?'. JavaScript provides operators like >, <, >=, <=, ==, ===, !=, and !==. Among these, the most important distinction is between == (loose equality) and === (strict equality). Loose equality allows type coercion, meaning JavaScript may automatically convert one value's type before comparison. Strict equality avoids this behavior and compares both value and type. Because strict equality produces more predictable results, it is generally recommended in modern JavaScript development. Understanding comparison operators is essential because they are used in conditions, loops, validation logic, authentication systems, and virtually every application that makes decisions.",
+    "example": "7 == '7' returns true because JavaScript converts the string to a number. However, 7 === '7' returns false because the types are different.",
+    "analogy": "Comparison operators act like a judge who evaluates two pieces of information and returns a yes or no decision.",
+    "keyTakeaway": "Prefer strict equality (===) because it compares both value and type."
+  },
+  "tags": [
+    "Comparison",
+    "Equality",
+    "Boolean",
+    "Operators",
+    "JavaScript"
+  ],
+  "category": "JavaScript Fundamentals",
+  "revisionSummary": "Use === for predictable comparisons.",
+  "mcqs": [
+    {
+      "id": "q1",
+      "type": "definition",
+      "question": "What type of value do comparison operators return?",
+      "options": [
+        "String",
+        "Number",
+        "Boolean",
+        "Object"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Comparison operators always return true or false."
+    },
+    {
+      "id": "q2",
+      "type": "understanding",
+      "question": "Why is === generally preferred over == ?",
+      "options": [
+        "It is faster to type",
+        "It checks both value and type",
+        "It only works with numbers",
+        "It converts all values to strings"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Strict equality avoids unexpected type coercion."
+    },
+    {
+      "id": "q3",
+      "type": "application",
+      "question": "What is the result of 0 === false?",
+      "options": [
+        "true",
+        "false",
+        "undefined",
+        "null"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The values have different types, so strict equality returns false."
+    },
+    {
+      "id": "q4",
+      "type": "scenario",
+      "question": "A login system must verify that both value and type match exactly. Which operator should be used?",
+      "options": [
+        "==",
+        "!=",
+        "===",
+        "<="
+      ],
+      "correctAnswer": 2,
+      "explanation": "Strict equality checks both type and value."
+    },
+    {
+      "id": "q5",
+      "type": "misconception",
+      "question": "The operators == and === always produce identical results.",
+      "options": [
+        "True",
+        "False",
+        "Only for numbers",
+        "Only in browsers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Loose equality performs type coercion while strict equality does not."
+    }
+  ]
+}

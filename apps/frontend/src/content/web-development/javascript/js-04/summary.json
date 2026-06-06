@@ -1,0 +1,66 @@
+{
+  "quickRevision": [
+    {
+      "title": "Bitwise Operators",
+      "summary": "Bitwise operators manipulate binary digits directly."
+    },
+    {
+      "title": "Typeof and Ternary",
+      "summary": "Type checking and concise conditional expressions."
+    },
+    {
+      "title": "Modern Operators",
+      "summary": "Nullish, optional chaining, spread, and destructuring."
+    },
+    {
+      "title": "Binary System",
+      "summary": "Computers store numbers using binary digits."
+    },
+    {
+      "title": "IEEE-754",
+      "summary": "JavaScript numbers use 64-bit floating point."
+    },
+    {
+      "title": "Precision Problems",
+      "summary": "Binary approximations cause decimal inaccuracies."
+    },
+    {
+      "title": "Special Numbers",
+      "summary": "Infinity, NaN, safe integers, and BigInt."
+    },
+    {
+      "title": "Type Conversion",
+      "summary": "Convert values between different data types."
+    },
+    {
+      "title": "String and Number Conversion",
+      "summary": "Use String(), Number(), parseInt(), parseFloat()."
+    },
+    {
+      "title": "Truthy and Falsy",
+      "summary": "Boolean conversion follows truthy/falsy rules."
+    },
+    {
+      "title": "Equality Comparison",
+      "summary": "Prefer strict equality over loose equality."
+    },
+    {
+      "title": "Relational Comparison",
+      "summary": "Strings, numbers, arrays, and objects compare differently."
+    }
+  ],
+  "flow": [
+    "Bitwise Operators",
+    "typeof and Ternary",
+    "Modern JavaScript Operators",
+    "Number Systems",
+    "IEEE-754 Storage",
+    "Floating Point Precision",
+    "Special Number Values",
+    "Type Conversion",
+    "String and Number Conversion",
+    "Boolean Conversion",
+    "Equality Comparison",
+    "Relational and Object Comparison"
+  ]
+}

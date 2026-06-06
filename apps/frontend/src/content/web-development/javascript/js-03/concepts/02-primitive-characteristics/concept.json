@@ -1,0 +1,93 @@
+{
+  "id": "02-primitive-characteristics",
+  "title": "Primitive Values and Immutability",
+  "estimatedMinutes": 3,
+  "learningObjectives": [
+    "Identify all primitive data types",
+    "Understand immutability",
+    "Learn value-copy behavior"
+  ],
+  "image": "./image.png",
+  "content": {
+    "explanation": "Primitive values are the smallest indivisible values in JavaScript. There are seven primitive types: Number, String, Boolean, Undefined, Null, BigInt, and Symbol. These values are stored and copied by value, meaning each variable receives its own independent copy. One of the most important characteristics of primitives is immutability. Once a primitive value is created, it cannot be changed internally. For example, strings cannot be modified character by character. Instead, when a value appears to change, JavaScript creates a completely new value and updates the variable to point to it. Immutability improves predictability, simplifies memory management, and enables engine optimizations. Because primitive values never change after creation, JavaScript engines can compare them quickly and safely. Understanding primitive behavior helps explain why changing one primitive variable never affects another variable that was copied from it.",
+    "example": "If let age = 25 and let newAge = age, changing newAge to 30 does not affect age because each variable has its own copy.",
+    "analogy": "A photocopy of a document is independent. Writing on your copy does not change the original document.",
+    "keyTakeaway": "Primitive values are immutable and copied independently by value."
+  },
+  "tags": [
+    "Primitive",
+    "Immutability",
+    "Value Copy",
+    "JavaScript",
+    "Memory"
+  ],
+  "category": "JavaScript Fundamentals",
+  "revisionSummary": "Primitives are immutable and copied by value.",
+  "mcqs": [
+    {
+      "id": "q1",
+      "type": "definition",
+      "question": "Which of the following is a primitive data type?",
+      "options": [
+        "Object",
+        "Array",
+        "String",
+        "Function"
+      ],
+      "correctAnswer": 2,
+      "explanation": "String is one of JavaScript's seven primitive data types."
+    },
+    {
+      "id": "q2",
+      "type": "understanding",
+      "question": "What does immutability mean for primitive values?",
+      "options": [
+        "They cannot be stored",
+        "They cannot be copied",
+        "They cannot be changed after creation",
+        "They always use heap memory"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Primitive values remain unchanged; new values are created instead."
+    },
+    {
+      "id": "q3",
+      "type": "application",
+      "question": "What is the output?\nlet a = 10;\nlet b = a;\nb = 20;\nconsole.log(a);",
+      "options": [
+        "10",
+        "20",
+        "undefined",
+        "null"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Primitive values are copied by value, so changing b does not affect a."
+    },
+    {
+      "id": "q4",
+      "type": "scenario",
+      "question": "A developer tries to change the first character of a string directly. What happens?",
+      "options": [
+        "The string changes",
+        "JavaScript creates a new character",
+        "The original string remains unchanged",
+        "The program crashes"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Strings are immutable and cannot be modified directly."
+    },
+    {
+      "id": "q5",
+      "type": "misconception",
+      "question": "When a primitive value changes, JavaScript modifies the original value in memory.",
+      "options": [
+        "True",
+        "False",
+        "Only for strings",
+        "Only for numbers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "JavaScript creates a new primitive value and updates the variable reference."
+    }
+  ]
+}

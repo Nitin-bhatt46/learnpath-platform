@@ -1,0 +1,93 @@
+{
+  "id": "01-bitwise-operators",
+  "title": "Bitwise Operators",
+  "estimatedMinutes": 3,
+  "learningObjectives": [
+    "Understand binary-based operations",
+    "Learn common bitwise operators",
+    "Recognize real-world uses of bit manipulation"
+  ],
+  "image": "./image.png",
+  "content": {
+    "explanation": "Bitwise operators work directly on binary digits (bits). Since computers internally store data using 0s and 1s, bitwise operations allow developers to manipulate values at the lowest level. JavaScript provides several bitwise operators including AND (&), OR (|), XOR (^), NOT (~), left shift (<<), and right shift (>>). The AND operator returns 1 only when both bits are 1. OR returns 1 when at least one bit is 1. XOR returns 1 when bits are different. Left shift moves bits to the left, effectively multiplying a number by powers of two, while right shift moves bits to the right, effectively dividing by powers of two. Although bitwise operators are less common in everyday web development, they are heavily used in graphics, networking, compression algorithms, cryptography, embedded systems, and performance-critical software.",
+    "example": "The number 5 in binary is 101. Applying 5 << 1 produces 1010, which equals 10 in decimal.",
+    "analogy": "Bitwise operators are like rearranging switches in an electrical control panel. Each switch can only be ON (1) or OFF (0).",
+    "keyTakeaway": "Bitwise operators manipulate binary data directly for efficient low-level computations."
+  },
+  "tags": [
+    "Bitwise",
+    "Binary",
+    "Operators",
+    "Performance",
+    "JavaScript"
+  ],
+  "category": "JavaScript Fundamentals",
+  "revisionSummary": "Bitwise operators work directly on binary digits.",
+  "mcqs": [
+    {
+      "id": "q1",
+      "type": "definition",
+      "question": "What do bitwise operators work on?",
+      "options": [
+        "HTML elements",
+        "Binary digits",
+        "Strings only",
+        "Functions"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Bitwise operators manipulate binary values consisting of 0s and 1s."
+    },
+    {
+      "id": "q2",
+      "type": "understanding",
+      "question": "When does the AND (&) operator return 1?",
+      "options": [
+        "When either bit is 1",
+        "When both bits are 0",
+        "When both bits are 1",
+        "When bits are different"
+      ],
+      "correctAnswer": 2,
+      "explanation": "AND returns 1 only if both input bits are 1."
+    },
+    {
+      "id": "q3",
+      "type": "application",
+      "question": "What is the result of 5 << 1?",
+      "options": [
+        "2",
+        "5",
+        "10",
+        "20"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Left shifting by one position doubles the value. 5 becomes 10."
+    },
+    {
+      "id": "q4",
+      "type": "scenario",
+      "question": "A developer is building a compression algorithm and needs efficient low-level data manipulation. Which operator category is most relevant?",
+      "options": [
+        "Comparison operators",
+        "Assignment operators",
+        "Bitwise operators",
+        "Logical operators"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Compression algorithms commonly use bit-level operations for efficiency."
+    },
+    {
+      "id": "q5",
+      "type": "misconception",
+      "question": "Bitwise operators are mainly designed to manipulate decimal digits directly.",
+      "options": [
+        "True",
+        "False",
+        "Only in Node.js",
+        "Only in browsers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Bitwise operators work on binary representations, not decimal digits."
+    }
+  ]
+}

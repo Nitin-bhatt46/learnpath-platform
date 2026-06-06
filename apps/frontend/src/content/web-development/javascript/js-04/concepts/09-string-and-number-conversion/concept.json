@@ -1,0 +1,93 @@
+{
+  "id": "09-string-and-number-conversion",
+  "title": "String and Number Conversion",
+  "estimatedMinutes": 4,
+  "learningObjectives": [
+    "Convert values into strings",
+    "Convert values into numbers",
+    "Understand Number(), parseInt(), parseFloat(), and unary plus"
+  ],
+  "image": "./image.png",
+  "content": {
+    "explanation": "JavaScript provides several ways to convert values between strings and numbers. The String() function converts any value into its text representation. For example, String(123) becomes '123' and String(true) becomes 'true'. The Number() function converts values into numbers when possible. It can convert strings such as '100' into 100, but invalid numeric strings like 'hello' become NaN. JavaScript also provides parseInt() and parseFloat() for extracting numeric values from strings. parseInt() reads integer values until it encounters a non-numeric character, while parseFloat() supports decimal numbers. Another shortcut is the unary plus operator (+), which behaves similarly to Number(). Although unary plus is concise, many teams prefer Number() because its intent is clearer. Understanding these conversion methods is important because user input, API responses, and external data frequently arrive as strings but often need to be processed as numbers.",
+    "example": "parseInt('100px') returns 100, while Number('100px') returns NaN because Number() requires the entire string to be numeric.",
+    "analogy": "Conversion functions are like translators that convert information into a format your program can understand and use.",
+    "keyTakeaway": "Use String(), Number(), parseInt(), and parseFloat() intentionally to avoid unexpected conversion behavior."
+  },
+  "tags": [
+    "String",
+    "Number",
+    "parseInt",
+    "parseFloat",
+    "Type Conversion"
+  ],
+  "category": "JavaScript Fundamentals",
+  "revisionSummary": "Choose the right conversion method for the desired result.",
+  "mcqs": [
+    {
+      "id": "q1",
+      "type": "definition",
+      "question": "What does Number('100') return?",
+      "options": [
+        "\"100\"",
+        "100",
+        "NaN",
+        "true"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Number() converts a valid numeric string into a number."
+    },
+    {
+      "id": "q2",
+      "type": "understanding",
+      "question": "Why does parseInt('100px') return 100?",
+      "options": [
+        "It converts all characters",
+        "It stops reading when a non-numeric character appears",
+        "It ignores numbers",
+        "It creates a string"
+      ],
+      "correctAnswer": 1,
+      "explanation": "parseInt() extracts numeric digits from the beginning of a string."
+    },
+    {
+      "id": "q3",
+      "type": "application",
+      "question": "What is the result of Number('hello')?",
+      "options": [
+        "0",
+        "undefined",
+        "NaN",
+        "hello"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The string 'hello' cannot be converted into a valid number."
+    },
+    {
+      "id": "q4",
+      "type": "scenario",
+      "question": "A user enters '10.5kg' in a form. Which function is best for extracting the decimal number?",
+      "options": [
+        "String()",
+        "Boolean()",
+        "parseFloat()",
+        "typeof"
+      ],
+      "correctAnswer": 2,
+      "explanation": "parseFloat() can extract decimal values from strings containing units."
+    },
+    {
+      "id": "q5",
+      "type": "misconception",
+      "question": "Number('100px') and parseInt('100px') produce the same result.",
+      "options": [
+        "True",
+        "False",
+        "Only for integers",
+        "Only in strict mode"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Number('100px') returns NaN, while parseInt('100px') returns 100."
+    }
+  ]
+}

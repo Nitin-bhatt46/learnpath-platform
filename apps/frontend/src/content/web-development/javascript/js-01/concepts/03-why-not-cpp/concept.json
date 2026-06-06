@@ -1,0 +1,23 @@
+{
+  "id": "03-why-not-cpp",
+  "title": "Why Browsers Did Not Use C++",
+  "estimatedMinutes": 3,
+  "learningObjectives": ["Understand browser requirements","Compare C++ and JavaScript","Learn browser safety needs"],
+  "image": "./image.png",
+  "content": {
+    "explanation": "Browsers must safely execute code from unknown websites on millions of devices. C++ allows direct memory access, file access, and system-level operations. These capabilities are powerful but dangerous for the web. Browsers needed a lightweight language that was easy to learn, safe to run, and suitable for non-expert developers. JavaScript was designed specifically for these requirements.",
+    "example": "A website should not be able to delete files from your computer through browser code.",
+    "analogy": "Giving every visitor a master key to your house would be unsafe.",
+    "keyTakeaway": "Browser languages prioritize safety over raw power."
+  },
+  "tags": ["C++","Browser","Security"],
+  "category": "Browser Fundamentals",
+  "revisionSummary": "C++ was too powerful and unsafe.",
+  "mcqs": [
+    {"id":"q1","type":"definition","question":"Why was C++ unsuitable for browsers?","options":["Too safe","Too simple","Too powerful and risky","Too colorful"],"correctAnswer":2,"explanation":"Direct system access creates risks."},
+    {"id":"q2","type":"understanding","question":"What must browsers prioritize?","options":["Power only","Safety","Storage","Compilation"],"correctAnswer":1,"explanation":"Safety is critical."},
+    {"id":"q3","type":"application","question":"A webpage attempts raw memory access. Which language model prevents this?","options":["Browser JavaScript","HTML","CSS","Image"],"correctAnswer":0,"explanation":"JavaScript is sandboxed."},
+    {"id":"q4","type":"scenario","question":"A beginner wants simple browser scripting. Which language fits best?","options":["Assembly","C++","JavaScript","Kernel C"],"correctAnswer":2,"explanation":"JavaScript was designed for this."},
+    {"id":"q5","type":"misconception","question":"More powerful access always means better browser security.","options":["True","False","Sometimes","Depends"],"correctAnswer":1,"explanation":"More access often means more risk."}
+  ]
+}

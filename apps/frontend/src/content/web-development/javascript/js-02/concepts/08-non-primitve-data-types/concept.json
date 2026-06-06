@@ -1,0 +1,93 @@
+{
+  "id": "08-non-primitive-data-types",
+  "title": "Non-Primitive Data Types in JavaScript",
+  "estimatedMinutes": 3,
+  "learningObjectives": [
+    "Understand non-primitive data types",
+    "Identify common object-based types",
+    "Learn reference-based storage"
+  ],
+  "image": "./image.png",
+  "content": {
+    "explanation": "Non-primitive data types are more complex structures used to store collections of data and behavior. Unlike primitive types, non-primitives are stored and accessed through references. The most important non-primitive type is Object, which allows related data to be grouped together. Arrays store ordered collections of values. Functions are special objects that can be executed. JavaScript also provides Map for key-value storage, Set for unique values, and Date for handling time-related information. Because non-primitive values are reference-based, multiple variables can point to the same object in memory. Modifying the object through one reference affects all variables pointing to that same object. This behavior is a key difference between primitives and non-primitives and is important for understanding memory management and debugging.",
+    "example": "A user profile can be stored as an object containing name, age, email, and preferences in a single structure.",
+    "analogy": "A non-primitive value is like a house address. Multiple people can have the same address written down and all point to the same house.",
+    "keyTakeaway": "Non-primitive data types store complex data through references."
+  },
+  "tags": [
+    "Object",
+    "Array",
+    "Function",
+    "Reference",
+    "JavaScript"
+  ],
+  "category": "JavaScript Fundamentals",
+  "revisionSummary": "Objects store complex data using references.",
+  "mcqs": [
+    {
+      "id": "q1",
+      "type": "definition",
+      "question": "Which of the following is a non-primitive data type?",
+      "options": [
+        "Boolean",
+        "String",
+        "Object",
+        "Number"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Objects are non-primitive reference types."
+    },
+    {
+      "id": "q2",
+      "type": "understanding",
+      "question": "What is the main difference between primitive and non-primitive values?",
+      "options": [
+        "Non-primitives are always numbers",
+        "Non-primitives store references",
+        "Primitives use more memory",
+        "Primitives are slower"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Non-primitives are reference-based while primitives store actual values."
+    },
+    {
+      "id": "q3",
+      "type": "application",
+      "question": "Which data type is best for storing a list of products?",
+      "options": [
+        "Boolean",
+        "Array",
+        "Null",
+        "Symbol"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Arrays are designed to store ordered collections of values."
+    },
+    {
+      "id": "q4",
+      "type": "scenario",
+      "question": "A developer creates an object and assigns it to two variables. One variable changes a property. What happens?",
+      "options": [
+        "Only one variable changes",
+        "The object is duplicated",
+        "Both variables see the change",
+        "JavaScript throws an error"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Both variables reference the same object in memory."
+    },
+    {
+      "id": "q5",
+      "type": "misconception",
+      "question": "Arrays and functions are not objects in JavaScript.",
+      "options": [
+        "True",
+        "False",
+        "Sometimes",
+        "Depends on browser"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Arrays and functions are specialized object types in JavaScript."
+    }
+  ]
+}

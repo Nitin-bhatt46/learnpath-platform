@@ -1,0 +1,93 @@
+{
+  "id": "07-primitive-data-types",
+  "title": "Primitive Data Types in JavaScript",
+  "estimatedMinutes": 3,
+  "learningObjectives": [
+    "Understand primitive data types",
+    "Identify all primitive types in JavaScript",
+    "Learn when to use each primitive type"
+  ],
+  "image": "./image.png",
+  "content": {
+    "explanation": "Primitive data types are the simplest and most fundamental data types in JavaScript. They store actual values rather than references to other memory locations. JavaScript has seven primitive data types: String, Number, Boolean, Undefined, Null, BigInt, and Symbol. Strings store text, Numbers store numeric values, and Booleans represent true or false conditions. Undefined indicates that a variable has been declared but not assigned a value, while Null represents an intentional absence of value. BigInt is used for very large integers that exceed the safe limits of Number. Symbol creates unique identifiers that cannot accidentally conflict with other values. Primitive values are immutable, meaning their contents cannot be changed after creation. When assigned to another variable, their values are copied rather than shared.",
+    "example": "A user's name is stored as a String, age as a Number, login status as a Boolean, and a unique internal identifier can be stored using a Symbol.",
+    "analogy": "Primitive values are like individual pieces of paper. When you make a copy, each person gets their own separate sheet.",
+    "keyTakeaway": "Primitive data types store simple immutable values directly."
+  },
+  "tags": [
+    "Primitive Types",
+    "String",
+    "Number",
+    "Boolean",
+    "JavaScript"
+  ],
+  "category": "JavaScript Fundamentals",
+  "revisionSummary": "Primitive types store simple immutable values.",
+  "mcqs": [
+    {
+      "id": "q1",
+      "type": "definition",
+      "question": "Which of the following is a primitive data type in JavaScript?",
+      "options": [
+        "Object",
+        "Array",
+        "String",
+        "Map"
+      ],
+      "correctAnswer": 2,
+      "explanation": "String is one of the seven primitive data types."
+    },
+    {
+      "id": "q2",
+      "type": "understanding",
+      "question": "Why are primitive values called immutable?",
+      "options": [
+        "They cannot be stored",
+        "They cannot be copied",
+        "Their value cannot be changed after creation",
+        "They only work in browsers"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Primitive values cannot be modified directly after creation."
+    },
+    {
+      "id": "q3",
+      "type": "application",
+      "question": "Which primitive type should be used to store a user's login status?",
+      "options": [
+        "String",
+        "Boolean",
+        "Object",
+        "Array"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Boolean values represent true or false states."
+    },
+    {
+      "id": "q4",
+      "type": "scenario",
+      "question": "A banking application needs to store an extremely large integer beyond Number limits. Which type should be used?",
+      "options": [
+        "String",
+        "Boolean",
+        "BigInt",
+        "Null"
+      ],
+      "correctAnswer": 2,
+      "explanation": "BigInt is designed for very large integers."
+    },
+    {
+      "id": "q5",
+      "type": "misconception",
+      "question": "Null and Undefined mean exactly the same thing.",
+      "options": [
+        "True",
+        "False",
+        "Sometimes",
+        "Only in strict mode"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Undefined means no value assigned, while Null represents an intentional absence of value."
+    }
+  ]
+}

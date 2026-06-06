@@ -1,0 +1,21 @@
+{
+  "id": "js-class-04",
+  "title": "JavaScript Numbers, Type Conversion and Comparison System",
+  "description": "Master bitwise operators, modern operators, number storage, floating point behavior, type conversion, truthy/falsy values, and JavaScript comparison algorithms.",
+  "estimatedMinutes": 36,
+  "difficulty": "Beginner",
+  "conceptOrder": [
+    "01-bitwise-operators",
+    "02-typeof-and-ternary",
+    "03-modern-javascript-operators",
+    "04-number-systems-and-binary",
+    "05-ieee754-and-number-storage",
+    "06-floating-point-precision",
+    "07-special-number-values",
+    "08-type-conversion-fundamentals",
+    "09-string-and-number-conversion",
+    "10-boolean-conversion-truthy-falsy",
+    "11-comparison-and-equality",
+    "12-relational-and-object-comparison"
+  ]
+}

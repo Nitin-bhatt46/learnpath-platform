@@ -1,0 +1,93 @@
+{
+  "id": "08-assignment-operators",
+  "title": "Assignment Operators",
+  "estimatedMinutes": 3,
+  "learningObjectives": [
+    "Understand assignment operators",
+    "Learn compound assignments",
+    "Use shorthand updates effectively"
+  ],
+  "image": "./image.png",
+  "content": {
+    "explanation": "Assignment operators are used to store values inside variables. The most basic assignment operator is =, which assigns the value on the right side to the variable on the left side. JavaScript also provides compound assignment operators that combine an operation with assignment. For example, += adds a value and stores the result back into the same variable, while -=, *=, /=, %=, and **= perform subtraction, multiplication, division, modulus, and exponentiation before assignment. These operators make code shorter and easier to read. Instead of writing x = x + 5, developers can simply write x += 5. Assignment operators are widely used when updating counters, scores, balances, quantities, and other changing values. Understanding them is important because they appear frequently in loops, conditions, calculations, and real-world applications.",
+    "example": "A bank account balance of 1000 can be updated after a deposit using balance += 200, resulting in a new balance of 1200.",
+    "analogy": "Assignment operators are like updating a notebook entry instead of writing the entire record from scratch every time.",
+    "keyTakeaway": "Assignment operators store values and provide concise ways to update existing variables."
+  },
+  "tags": [
+    "Assignment",
+    "Variables",
+    "Operators",
+    "JavaScript",
+    "Expressions"
+  ],
+  "category": "JavaScript Fundamentals",
+  "revisionSummary": "Assignment operators store and update variable values.",
+  "mcqs": [
+    {
+      "id": "q1",
+      "type": "definition",
+      "question": "What is the primary purpose of the = operator?",
+      "options": [
+        "Compare values",
+        "Assign a value to a variable",
+        "Create an object",
+        "Perform multiplication"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The assignment operator stores a value in a variable."
+    },
+    {
+      "id": "q2",
+      "type": "understanding",
+      "question": "What does the expression x += 5 mean?",
+      "options": [
+        "x = 5",
+        "x = x - 5",
+        "x = x + 5",
+        "x = x * 5"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The += operator adds a value and stores the result back in the variable."
+    },
+    {
+      "id": "q3",
+      "type": "application",
+      "question": "What is the value of score after this code?\nlet score = 10;\nscore *= 3;",
+      "options": [
+        "10",
+        "13",
+        "30",
+        "300"
+      ],
+      "correctAnswer": 2,
+      "explanation": "score *= 3 is equivalent to score = score * 3."
+    },
+    {
+      "id": "q4",
+      "type": "scenario",
+      "question": "A game awards 50 points after each level. Which operator is most appropriate to update the score?",
+      "options": [
+        "===",
+        "+=",
+        "&&",
+        "!"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The += operator is commonly used for increasing counters and scores."
+    },
+    {
+      "id": "q5",
+      "type": "misconception",
+      "question": "The = operator checks whether two values are equal.",
+      "options": [
+        "True",
+        "False",
+        "Only in strict mode",
+        "Only for numbers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "= performs assignment, while == and === perform comparisons."
+    }
+  ]
+}

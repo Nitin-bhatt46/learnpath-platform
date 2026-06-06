@@ -1,0 +1,93 @@
+{
+  "id": "09-arithmetic-operators",
+  "title": "Arithmetic Operators",
+  "estimatedMinutes": 3,
+  "learningObjectives": [
+    "Understand arithmetic operators",
+    "Perform mathematical calculations",
+    "Learn increment and decrement behavior"
+  ],
+  "image": "./image.png",
+  "content": {
+    "explanation": "Arithmetic operators perform mathematical calculations in JavaScript. The most common operators are addition (+), subtraction (-), multiplication (*), division (/), modulus (%), exponentiation (**), increment (++), and decrement (--). These operators allow programs to calculate totals, averages, percentages, scores, and many other values. The modulus operator (%) returns the remainder after division and is commonly used to determine whether a number is even or odd. Increment and decrement operators increase or decrease a value by one. JavaScript supports both prefix (++x) and postfix (x++) forms. In postfix form, the current value is returned before incrementing. In prefix form, the value is incremented first and then returned. Arithmetic operators are fundamental because they appear in loops, financial calculations, game logic, algorithms, and almost every real-world application.",
+    "example": "The expression 10 % 3 returns 1 because dividing 10 by 3 leaves a remainder of 1.",
+    "analogy": "Arithmetic operators are like basic tools in a toolbox. Each tool performs a different mathematical task.",
+    "keyTakeaway": "Arithmetic operators perform calculations and help manipulate numeric values efficiently."
+  },
+  "tags": [
+    "Arithmetic",
+    "Operators",
+    "Math",
+    "Increment",
+    "JavaScript"
+  ],
+  "category": "JavaScript Fundamentals",
+  "revisionSummary": "Arithmetic operators perform mathematical operations.",
+  "mcqs": [
+    {
+      "id": "q1",
+      "type": "definition",
+      "question": "Which operator returns the remainder after division?",
+      "options": [
+        "/",
+        "*",
+        "%",
+        "**"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The modulus (%) operator returns the remainder."
+    },
+    {
+      "id": "q2",
+      "type": "understanding",
+      "question": "Why is the modulus operator commonly used?",
+      "options": [
+        "To create objects",
+        "To detect patterns such as even and odd numbers",
+        "To compare strings",
+        "To allocate memory"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Modulus is frequently used to check divisibility and cyclic operations."
+    },
+    {
+      "id": "q3",
+      "type": "application",
+      "question": "What is the output of 2 ** 3?",
+      "options": [
+        "5",
+        "6",
+        "8",
+        "9"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The exponentiation operator raises 2 to the power of 3, producing 8."
+    },
+    {
+      "id": "q4",
+      "type": "scenario",
+      "question": "Given:\nlet x = 5;\nconsole.log(x++);\nWhat is printed?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "undefined"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Postfix increment returns the current value before incrementing."
+    },
+    {
+      "id": "q5",
+      "type": "misconception",
+      "question": "The operators x++ and ++x always return the same value.",
+      "options": [
+        "True",
+        "False",
+        "Only for numbers greater than 10",
+        "Only in strict mode"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Postfix returns the old value, while prefix returns the incremented value."
+    }
+  ]
+}

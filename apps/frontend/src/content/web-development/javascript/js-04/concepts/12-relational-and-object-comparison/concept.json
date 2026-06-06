@@ -1,0 +1,93 @@
+{
+  "id": "12-relational-and-object-comparison",
+  "title": "Relational and Object Comparison",
+  "estimatedMinutes": 4,
+  "learningObjectives": [
+    "Understand relational comparisons",
+    "Learn string comparison rules",
+    "Understand object and array comparison behavior"
+  ],
+  "image": "./image.png",
+  "content": {
+    "explanation": "JavaScript supports relational operators such as >, <, >=, and <= to compare values. When numbers are compared, JavaScript performs straightforward numeric comparisons. However, strings are compared lexicographically using Unicode values. This means 'apple' < 'banana' evaluates to true because the comparison starts character by character. When comparing values of different types, JavaScript may perform type conversion depending on the operator being used. Objects and arrays introduce another important concept. Unlike primitive values, objects are compared by reference rather than by content. Two separate objects containing identical data are still considered different because they occupy different memory locations. The same rule applies to arrays and functions. Understanding relational and object comparison is essential because developers frequently compare user input, sort data, filter collections, and validate application state. Many interview questions focus on these comparison rules because they reveal how JavaScript handles values internally.",
+    "example": "[] === [] returns false because both arrays are different objects stored at different memory locations.",
+    "analogy": "Comparing objects is like comparing house addresses. Two identical houses are still different if they exist at different addresses.",
+    "keyTakeaway": "Objects and arrays compare by reference, while strings and numbers compare by value."
+  },
+  "tags": [
+    "Comparison",
+    "Objects",
+    "Arrays",
+    "Relational Operators",
+    "JavaScript"
+  ],
+  "category": "JavaScript Fundamentals",
+  "revisionSummary": "Objects compare by reference; primitives compare by value.",
+  "mcqs": [
+    {
+      "id": "q1",
+      "type": "definition",
+      "question": "How are objects compared in JavaScript?",
+      "options": [
+        "By content",
+        "By memory reference",
+        "By property count",
+        "By size"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Objects are compared using their references, not their contents."
+    },
+    {
+      "id": "q2",
+      "type": "understanding",
+      "question": "Why can two identical arrays be considered unequal?",
+      "options": [
+        "Arrays cannot be compared",
+        "JavaScript ignores arrays",
+        "They are different references in memory",
+        "Arrays are converted to strings"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Separate arrays occupy different memory locations even when they contain identical values."
+    },
+    {
+      "id": "q3",
+      "type": "application",
+      "question": "What is the result of:\n[] === []",
+      "options": [
+        "true",
+        "false",
+        "undefined",
+        "NaN"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Each array literal creates a new object reference."
+    },
+    {
+      "id": "q4",
+      "type": "scenario",
+      "question": "A developer assigns let b = a where a is an object. What is the result of a === b?",
+      "options": [
+        "false",
+        "undefined",
+        "true",
+        "NaN"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Both variables reference the same object in memory."
+    },
+    {
+      "id": "q5",
+      "type": "misconception",
+      "question": "Two objects containing exactly the same properties and values are automatically equal in JavaScript.",
+      "options": [
+        "True",
+        "False",
+        "Only in strict mode",
+        "Only for arrays"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Object equality depends on reference identity, not identical content."
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "08-java-vs-javascript",
+  "title": "Java and JavaScript",
+  "estimatedMinutes": 3,
+  "learningObjectives": ["Differentiate Java and JavaScript","Understand JVM","Learn browser roles"],
+  "image": "./image.png",
+  "content": {
+    "explanation": "Java and JavaScript are different technologies with different goals. Java focused on larger applications and portability through the JVM. JavaScript focused on lightweight browser scripting and direct page interaction. Although they coexisted for years, JavaScript eventually became the primary browser language.",
+    "example": "Java applets handled larger isolated tasks while JavaScript managed page events.",
+    "analogy": "A truck and a bicycle both transport things but serve different purposes.",
+    "keyTakeaway": "Java and JavaScript solve different problems."
+  },
+  "tags": ["Java","JVM","JavaScript"],
+  "category": "JavaScript Fundamentals",
+  "revisionSummary": "Java and JavaScript are different technologies.",
+  "mcqs": [
+    {"id":"q1","type":"definition","question":"What is JVM?","options":["Database","Java Virtual Machine","Compiler","Framework"],"correctAnswer":1,"explanation":"JVM runs Java bytecode."},
+    {"id":"q2","type":"understanding","question":"Why did Java need JVM?","options":["Portability","CSS","HTML","Storage"],"correctAnswer":0,"explanation":"JVM enables cross-platform execution."},
+    {"id":"q3","type":"application","question":"Which technology directly manipulates webpage elements?","options":["JavaScript","JVM","Applet","Compiler"],"correctAnswer":0,"explanation":"JavaScript interacts with the page."},
+    {"id":"q4","type":"scenario","question":"A developer needs quick page interaction. Which fits best?","options":["Java Applet","JavaScript","Kernel Module","Driver"],"correctAnswer":1,"explanation":"JavaScript is designed for this."},
+    {"id":"q5","type":"misconception","question":"JavaScript is simply a version of Java.","options":["True","False","Sometimes","Depends"],"correctAnswer":1,"explanation":"They are separate languages."}
+  ]
+}

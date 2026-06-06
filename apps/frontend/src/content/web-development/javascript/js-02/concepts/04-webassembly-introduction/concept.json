@@ -1,0 +1,62 @@
+{
+  "id": "04-webassembly-introduction",
+  "title": "Why WebAssembly Exists",
+  "estimatedMinutes": 3,
+  "learningObjectives": [
+    "Understand WebAssembly",
+    "Learn performance motivations",
+    "Identify use cases"
+  ],
+  "image": "./image.png",
+  "content": {
+    "explanation": "WebAssembly, often called WASM, was created to enable high-performance applications inside browsers. Some workloads such as games, video editing, CAD tools, machine learning, and scientific computing require more performance than JavaScript can efficiently provide. WebAssembly allows languages like C++, Rust, and others to compile into a compact binary format that browsers can execute quickly.",
+    "example": "A browser-based video editor may use WebAssembly for heavy video processing.",
+    "analogy": "Using a sports car for a race instead of a family car.",
+    "keyTakeaway": "WebAssembly brings near-native performance to browsers."
+  },
+  "tags": ["WebAssembly", "Performance", "Browser"],
+  "category": "Runtime Foundations",
+  "revisionSummary": "WebAssembly enables high-performance browser applications.",
+  "mcqs": [
+    {
+      "id": "q1",
+      "type": "definition",
+      "question": "What is WebAssembly?",
+      "options": ["Database", "Binary execution format", "Browser theme", "CSS framework"],
+      "correctAnswer": 1,
+      "explanation": "WebAssembly is a binary instruction format."
+    },
+    {
+      "id": "q2",
+      "type": "understanding",
+      "question": "Why was WebAssembly created?",
+      "options": ["Replace HTML", "Improve performance", "Store images", "Create databases"],
+      "correctAnswer": 1,
+      "explanation": "It targets high-performance workloads."
+    },
+    {
+      "id": "q3",
+      "type": "application",
+      "question": "Which workload benefits most from WebAssembly?",
+      "options": ["Heavy graphics processing", "Simple text display", "CSS styling", "HTML rendering"],
+      "correctAnswer": 0,
+      "explanation": "Heavy computation benefits greatly."
+    },
+    {
+      "id": "q4",
+      "type": "scenario",
+      "question": "A browser game needs maximum performance. Which technology helps?",
+      "options": ["WebAssembly", "HTML", "CSS", "Markdown"],
+      "correctAnswer": 0,
+      "explanation": "WebAssembly improves performance."
+    },
+    {
+      "id": "q5",
+      "type": "misconception",
+      "question": "WebAssembly was created to replace HTML.",
+      "options": ["True", "False", "Partially", "Depends"],
+      "correctAnswer": 1,
+      "explanation": "It complements browser technologies."
+    }
+  ]
+}

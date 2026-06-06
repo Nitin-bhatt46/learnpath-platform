@@ -1,0 +1,93 @@
+{
+  "id": "05-ieee754-and-number-storage",
+  "title": "How JavaScript Stores Numbers (IEEE-754)",
+  "estimatedMinutes": 3,
+  "learningObjectives": [
+    "Understand IEEE-754 number storage",
+    "Learn the structure of JavaScript numbers",
+    "Understand sign, exponent, and mantissa"
+  ],
+  "image": "./image.png",
+  "content": {
+    "explanation": "JavaScript stores all regular numbers using the IEEE-754 Double Precision Floating Point standard. This standard ensures that JavaScript engines such as V8, SpiderMonkey, and JavaScriptCore produce consistent numeric behavior across different platforms and browsers. Every JavaScript Number occupies 64 bits of memory. These 64 bits are divided into three parts: a 1-bit sign field, an 11-bit exponent field, and a 52-bit fraction field called the mantissa. The sign bit determines whether the number is positive or negative. The exponent stores magnitude information similar to scientific notation, while the mantissa stores the significant digits that provide precision. When a decimal number is entered into JavaScript, it is converted into binary, encoded using the IEEE-754 structure, and stored in memory. Understanding this storage model helps explain floating-point precision issues, rounding behavior, and special values such as Infinity and NaN.",
+    "example": "The number 42 is converted into binary and stored using IEEE-754's sign, exponent, and mantissa structure before calculations occur.",
+    "analogy": "Think of a number as a package. The sign is the direction label, the exponent determines the scale, and the mantissa contains the detailed contents.",
+    "keyTakeaway": "JavaScript stores numbers using a 64-bit IEEE-754 floating-point format."
+  },
+  "tags": [
+    "IEEE-754",
+    "Numbers",
+    "Memory",
+    "Floating Point",
+    "JavaScript"
+  ],
+  "category": "JavaScript Number System",
+  "revisionSummary": "JavaScript numbers use 64-bit IEEE-754 storage.",
+  "mcqs": [
+    {
+      "id": "q1",
+      "type": "definition",
+      "question": "Which standard does JavaScript use to store numbers?",
+      "options": [
+        "UTF-8",
+        "IEEE-754",
+        "ASCII",
+        "TCP/IP"
+      ],
+      "correctAnswer": 1,
+      "explanation": "JavaScript uses the IEEE-754 Double Precision Floating Point standard."
+    },
+    {
+      "id": "q2",
+      "type": "understanding",
+      "question": "Why does IEEE-754 exist?",
+      "options": [
+        "To make browsers colorful",
+        "To standardize number storage and calculations",
+        "To increase internet speed",
+        "To store HTML files"
+      ],
+      "correctAnswer": 1,
+      "explanation": "IEEE-754 ensures consistent numeric behavior across systems and engines."
+    },
+    {
+      "id": "q3",
+      "type": "application",
+      "question": "How many bits does a JavaScript Number use?",
+      "options": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "correctAnswer": 3,
+      "explanation": "JavaScript Numbers use 64-bit double-precision floating-point storage."
+    },
+    {
+      "id": "q4",
+      "type": "scenario",
+      "question": "A developer notices the same numeric calculation gives identical results in Chrome and Firefox. Which standard helps ensure this consistency?",
+      "options": [
+        "HTML5",
+        "IEEE-754",
+        "CSS",
+        "Unicode"
+      ],
+      "correctAnswer": 1,
+      "explanation": "IEEE-754 provides common storage and arithmetic rules across JavaScript engines."
+    },
+    {
+      "id": "q5",
+      "type": "misconception",
+      "question": "JavaScript stores numbers exactly as decimal digits entered by the user.",
+      "options": [
+        "True",
+        "False",
+        "Only for integers",
+        "Only in Node.js"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Numbers are converted into binary and stored using the IEEE-754 format."
+    }
+  ]
+}

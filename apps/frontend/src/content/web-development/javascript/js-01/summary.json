@@ -1,0 +1,66 @@
+{
+  "quickRevision": [
+    {
+      "title": "Web Foundation",
+      "summary": "HTML structures, CSS styles, JavaScript adds behavior."
+    },
+    {
+      "title": "Need for JavaScript",
+      "summary": "HTML and CSS cannot perform logic or validation."
+    },
+    {
+      "title": "Why Not C++",
+      "summary": "C++ is unsafe, complex, and unsuitable for browsers."
+    },
+    {
+      "title": "Browser Security",
+      "summary": "JavaScript runs in a sandboxed environment."
+    },
+    {
+      "title": "Hardware Limits",
+      "summary": "Early computers required lightweight browser technologies."
+    },
+    {
+      "title": "Garbage Collection",
+      "summary": "JavaScript automatically cleans unused memory."
+    },
+    {
+      "title": "History",
+      "summary": "Static websites created demand for browser scripting."
+    },
+    {
+      "title": "Java vs JavaScript",
+      "summary": "Java handled components, JavaScript handled interactions."
+    },
+    {
+      "title": "Glue Language",
+      "summary": "JavaScript connects UI elements and logic."
+    },
+    {
+      "title": "Brendan Eich",
+      "summary": "JavaScript was created in roughly ten days."
+    },
+    {
+      "title": "JavaScript Wins",
+      "summary": "Built-in simplicity beat heavyweight plugins."
+    },
+    {
+      "title": "WebAssembly",
+      "summary": "WebAssembly complements JavaScript, not replaces it."
+    }
+  ],
+  "flow": [
+    "Web Foundation",
+    "Need for JavaScript",
+    "Why Not C++",
+    "Browser Security",
+    "Hardware Limitations",
+    "Garbage Collection",
+    "History of JavaScript",
+    "Java vs JavaScript",
+    "Glue Language",
+    "Brendan Eich",
+    "JavaScript Wins",
+    "WebAssembly"
+  ]
+}

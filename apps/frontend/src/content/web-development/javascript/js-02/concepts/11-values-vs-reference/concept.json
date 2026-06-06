@@ -1,0 +1,93 @@
+{
+  "id": "11-value-vs-reference",
+  "title": "Value Copy vs Reference Copy",
+  "estimatedMinutes": 3,
+  "learningObjectives": [
+    "Understand value copying",
+    "Understand reference copying",
+    "Predict mutation behavior in JavaScript"
+  ],
+  "image": "./image.png",
+  "content": {
+    "explanation": "One of the most important concepts in JavaScript is understanding how values are copied. Primitive values such as numbers, strings, and booleans are copied by value. This means a completely new copy of the data is created when assigned to another variable. Changes to one variable do not affect the other. Objects, arrays, and functions behave differently because they are copied by reference. Instead of copying the entire object, JavaScript copies the memory reference pointing to that object. As a result, multiple variables can point to the same object in memory. If one variable modifies the object, all references see the change. This behavior explains many common bugs and interview questions. Understanding value and reference copying is essential for working with objects, arrays, state management, and memory in JavaScript.",
+    "example": "If a = 10 and b = a, changing b does not affect a. But if obj2 = obj1, modifying obj2 changes the shared object seen by obj1.",
+    "analogy": "Value copying is like making a photocopy of a document. Reference copying is like sharing the same document through a single online link.",
+    "keyTakeaway": "Primitives create independent copies, while objects share references to the same memory."
+  },
+  "tags": [
+    "Reference",
+    "Value Copy",
+    "Objects",
+    "Memory",
+    "JavaScript"
+  ],
+  "category": "Memory Management",
+  "revisionSummary": "Primitives copy values, objects copy references.",
+  "mcqs": [
+    {
+      "id": "q1",
+      "type": "definition",
+      "question": "How are primitive values copied in JavaScript?",
+      "options": [
+        "By reference",
+        "By pointer",
+        "By value",
+        "By object"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Primitive values create independent copies when assigned."
+    },
+    {
+      "id": "q2",
+      "type": "understanding",
+      "question": "Why do object changes appear in multiple variables?",
+      "options": [
+        "Objects are immutable",
+        "Objects share references",
+        "Objects are stored in CPU",
+        "Objects are compiled twice"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Multiple variables can reference the same object in memory."
+    },
+    {
+      "id": "q3",
+      "type": "application",
+      "question": "What is the value of 'a' after this code?\nlet a = 10;\nlet b = a;\nb = 20;",
+      "options": [
+        "10",
+        "20",
+        "undefined",
+        "null"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Primitive values are copied by value, so changing b does not affect a."
+    },
+    {
+      "id": "q4",
+      "type": "scenario",
+      "question": "Given:\nlet obj1 = { x: 1 };\nlet obj2 = obj1;\nobj2.x = 100;\nWhat is obj1.x?",
+      "options": [
+        "1",
+        "100",
+        "undefined",
+        "null"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Both variables reference the same object in memory."
+    },
+    {
+      "id": "q5",
+      "type": "misconception",
+      "question": "Assigning an object to another variable creates a completely new object automatically.",
+      "options": [
+        "True",
+        "False",
+        "Only in strict mode",
+        "Only in Node.js"
+      ],
+      "correctAnswer": 1,
+      "explanation": "JavaScript copies the reference, not the entire object."
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "06-garbage-collection",
+  "title": "Automatic Memory Management",
+  "estimatedMinutes": 3,
+  "learningObjectives": ["Understand garbage collection","Compare memory models","Recognize memory leaks"],
+  "image": "./image.png",
+  "content": {
+    "explanation": "Programs need memory to store data. In C++, developers often allocate and free memory manually. Mistakes can create leaks, crashes, and security problems. JavaScript simplifies this process through garbage collection. The engine automatically identifies unused objects and reclaims their memory. While this reduces complexity, memory leaks can still occur if references are kept unnecessarily.",
+    "example": "When an object is no longer referenced, the JavaScript engine can remove it from memory.",
+    "analogy": "A cleaning service removes unused items automatically.",
+    "keyTakeaway": "Garbage collection automates memory cleanup."
+  },
+  "tags": ["Memory","Garbage Collection","JavaScript"],
+  "category": "Memory Management",
+  "revisionSummary": "Unused memory is cleaned automatically.",
+  "mcqs": [
+    {"id":"q1","type":"definition","question":"What is garbage collection?","options":["Compilation","Automatic memory cleanup","Database indexing","Caching"],"correctAnswer":1,"explanation":"It reclaims unused memory."},
+    {"id":"q2","type":"understanding","question":"Why is garbage collection useful?","options":["More colors","Fewer memory mistakes","Bigger monitors","Faster typing"],"correctAnswer":1,"explanation":"It simplifies memory management."},
+    {"id":"q3","type":"application","question":"An object becomes unreachable. What may happen?","options":["Crash","Garbage collected","Compiled","Encrypted"],"correctAnswer":1,"explanation":"Unused objects are cleaned."},
+    {"id":"q4","type":"scenario","question":"A developer keeps unnecessary references. Result?","options":["Memory leak","Compilation error","Syntax color","CSS issue"],"correctAnswer":0,"explanation":"References can prevent cleanup."},
+    {"id":"q5","type":"misconception","question":"Garbage collection eliminates all memory leaks.","options":["True","False","Sometimes","Depends"],"correctAnswer":1,"explanation":"Leaks can still occur."}
+  ]
+}

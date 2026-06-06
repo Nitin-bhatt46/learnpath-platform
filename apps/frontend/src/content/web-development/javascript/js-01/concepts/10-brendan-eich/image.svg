@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-label="Scheduler assigning CPU time">
+  <rect width="1200" height="700" fill="#f7f5f0"/>
+  <rect x="105" y="140" width="250" height="95" rx="18" fill="#ffffff" stroke="#d6d3d1" stroke-width="5"/>
+  <rect x="105" y="285" width="250" height="95" rx="18" fill="#ffffff" stroke="#d6d3d1" stroke-width="5"/>
+  <rect x="105" y="430" width="250" height="95" rx="18" fill="#ffffff" stroke="#d6d3d1" stroke-width="5"/>
+  <text x="230" y="198" text-anchor="middle" font-family="Arial" font-size="30" font-weight="700" fill="#44403c">Browser</text>
+  <text x="230" y="343" text-anchor="middle" font-family="Arial" font-size="30" font-weight="700" fill="#44403c">Music</text>
+  <text x="230" y="488" text-anchor="middle" font-family="Arial" font-size="30" font-weight="700" fill="#44403c">Notes</text>
+  <rect x="500" y="255" width="230" height="160" rx="28" fill="#10b981"/>
+  <text x="615" y="345" text-anchor="middle" font-family="Arial" font-size="38" font-weight="700" fill="#ffffff">Scheduler</text>
+  <rect x="875" y="250" width="190" height="170" rx="28" fill="#ffffff" stroke="#10b981" stroke-width="8"/>
+  <text x="970" y="345" text-anchor="middle" font-family="Arial" font-size="50" font-weight="700" fill="#065f46">CPU</text>
+  <path d="M360 188 H480" stroke="#a8a29e" stroke-width="12" stroke-linecap="round"/>
+  <path d="M360 333 H480" stroke="#a8a29e" stroke-width="12" stroke-linecap="round"/>
+  <path d="M360 478 H480" stroke="#a8a29e" stroke-width="12" stroke-linecap="round"/>
+  <path d="M735 335 H855" stroke="#10b981" stroke-width="16" stroke-linecap="round"/>
+  <path d="M840 300 L895 335 L840 370" fill="none" stroke="#10b981" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

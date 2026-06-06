@@ -1,0 +1,27 @@
+{
+  "id": "01-web-foundation",
+  "title": "HTML, CSS and JavaScript",
+  "estimatedMinutes": 3,
+  "learningObjectives": [
+    "Understand the three core web technologies",
+    "Differentiate structure, style and behavior",
+    "Explain how websites are built"
+  ],
+  "image": "./image.png",
+  "content": {
+    "explanation": "Every website is built using three foundational technologies. HTML provides the structure by defining elements such as headings, paragraphs, buttons and forms. CSS controls the appearance by adding colors, layouts, spacing and visual styling. JavaScript provides behavior and allows pages to respond to user actions. Together they create modern web experiences. Without HTML there is nothing to display, without CSS websites look plain, and without JavaScript websites remain mostly static.",
+    "example": "An online shopping page uses HTML for the Buy Now button, CSS for its design, and JavaScript to place an order when clicked.",
+    "analogy": "A house uses bricks for structure, paint for appearance, and electricity for functionality.",
+    "keyTakeaway": "HTML structures, CSS styles, and JavaScript adds behavior."
+  },
+  "tags": ["HTML", "CSS", "JavaScript"],
+  "category": "Web Development Basics",
+  "revisionSummary": "Structure, style and behavior form the web.",
+  "mcqs": [
+    {"id":"q1","type":"definition","question":"What is the primary role of HTML?","options":["Styling","Structure","Database","Animation"],"correctAnswer":1,"explanation":"HTML defines page structure."},
+    {"id":"q2","type":"understanding","question":"Why is CSS needed?","options":["Store data","Run APIs","Improve appearance","Compile code"],"correctAnswer":2,"explanation":"CSS controls visual presentation."},
+    {"id":"q3","type":"application","question":"Which technology handles a button click?","options":["HTML","CSS","JavaScript","Image"],"correctAnswer":2,"explanation":"JavaScript handles interactions."},
+    {"id":"q4","type":"scenario","question":"A page shows content but has no styling. What is missing?","options":["HTML","CSS","JavaScript","Server"],"correctAnswer":1,"explanation":"CSS provides styling."},
+    {"id":"q5","type":"misconception","question":"HTML alone can create interactive applications.","options":["True","False","Partially","Depends"],"correctAnswer":1,"explanation":"HTML provides structure, not interactivity."}
+  ]
+}

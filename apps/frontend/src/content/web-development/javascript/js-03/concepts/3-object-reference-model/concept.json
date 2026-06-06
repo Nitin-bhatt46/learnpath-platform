@@ -1,0 +1,93 @@
+{
+  "id": "03-object-reference-model",
+  "title": "Objects and the Reference Model",
+  "estimatedMinutes": 3,
+  "learningObjectives": [
+    "Understand what objects are",
+    "Learn why objects use references",
+    "Understand shared references"
+  ],
+  "image": "./image.png",
+  "content": {
+    "explanation": "Objects are JavaScript's solution for storing complex and related information together. Unlike primitive values that store a single piece of information, objects can contain multiple properties and values. Examples include objects, arrays, and functions. Because objects can become large, JavaScript does not copy the entire object every time it is assigned to another variable. Instead, variables store a reference, which is essentially an address pointing to the object's location in memory. When an object is assigned to another variable, both variables point to the same object. This approach saves memory and improves performance because JavaScript avoids creating unnecessary copies. However, it also means that changes made through one variable can be seen through another variable if both reference the same object. Understanding references is essential because it explains many common JavaScript behaviors involving objects, arrays, and functions.",
+    "example": "If user and admin both reference the same object, changing admin.name will also affect user.name because both variables point to the same object.",
+    "analogy": "Instead of copying an entire house, you simply share its address. Anyone with the address reaches the same house.",
+    "keyTakeaway": "Objects are copied by reference, not by duplicating their contents."
+  },
+  "tags": [
+    "Object",
+    "Reference",
+    "Array",
+    "Function",
+    "Memory"
+  ],
+  "category": "JavaScript Fundamentals",
+  "revisionSummary": "Objects use shared references instead of value copies.",
+  "mcqs": [
+    {
+      "id": "q1",
+      "type": "definition",
+      "question": "What does a reference store?",
+      "options": [
+        "The complete object",
+        "A memory address to the object",
+        "Machine code",
+        "The CPU location"
+      ],
+      "correctAnswer": 1,
+      "explanation": "References point to the location where the object exists in memory."
+    },
+    {
+      "id": "q2",
+      "type": "understanding",
+      "question": "Why does JavaScript use references for objects?",
+      "options": [
+        "To improve memory efficiency",
+        "To reduce internet usage",
+        "To increase file size",
+        "To avoid variables"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Copying large objects repeatedly would waste memory and reduce performance."
+    },
+    {
+      "id": "q3",
+      "type": "application",
+      "question": "What is the output?\nlet user = {name:'Rahul'};\nlet admin = user;\nadmin.name = 'Aman';\nconsole.log(user.name);",
+      "options": [
+        "Rahul",
+        "Aman",
+        "undefined",
+        "null"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Both variables reference the same object."
+    },
+    {
+      "id": "q4",
+      "type": "scenario",
+      "question": "A company stores customer information in large objects. Why is reference storage beneficial?",
+      "options": [
+        "Objects become immutable",
+        "Memory usage is reduced",
+        "CPU no longer executes code",
+        "Variables disappear"
+      ],
+      "correctAnswer": 1,
+      "explanation": "References avoid unnecessary duplication of large data structures."
+    },
+    {
+      "id": "q5",
+      "type": "misconception",
+      "question": "Assigning an object to another variable automatically creates a completely new object.",
+      "options": [
+        "True",
+        "False",
+        "Only in Node.js",
+        "Only for arrays"
+      ],
+      "correctAnswer": 1,
+      "explanation": "JavaScript copies the reference, not the object itself."
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": "02-compiler-bootstrapping",
+  "title": "Compiler Bootstrapping",
+  "estimatedMinutes": 3,
+  "learningObjectives": [
+    "Understand compilers",
+    "Learn bootstrapping",
+    "Understand self-hosted compilers"
+  ],
+  "image": "./image.png",
+  "content": {
+    "explanation": "A compiler converts source code into machine code. Early compilers are often written in another language. Over time, a compiler may become capable of compiling its own source code. This process is called compiler bootstrapping. Many modern programming languages use self-hosted compilers because it allows the language ecosystem to evolve independently.",
+    "example": "Early C++ compilers were built using C before becoming self-hosted.",
+    "analogy": "A teacher trains a student who later becomes a teacher and trains future students.",
+    "keyTakeaway": "Compiler bootstrapping enables a compiler to eventually compile itself."
+  },
+  "tags": ["Compiler", "Bootstrapping", "Machine Code"],
+  "category": "Runtime Foundations",
+  "revisionSummary": "Compilers can eventually compile themselves.",
+  "mcqs": [
+    {
+      "id": "q1",
+      "type": "definition",
+      "question": "What is compiler bootstrapping?",
+      "options": ["Deleting code", "Compiling itself", "Running HTML", "Creating memory"],
+      "correctAnswer": 1,
+      "explanation": "Bootstrapping refers to a compiler compiling its own source."
+    },
+    {
+      "id": "q2",
+      "type": "understanding",
+      "question": "Why do compilers exist?",
+      "options": ["To store files", "To convert source code into machine code", "To style websites", "To create CPUs"],
+      "correctAnswer": 1,
+      "explanation": "Compilers convert code into executable instructions."
+    },
+    {
+      "id": "q3",
+      "type": "application",
+      "question": "A language compiler is rewritten in the same language. What is this called?",
+      "options": ["Compilation", "Parsing", "Bootstrapping", "Linking"],
+      "correctAnswer": 2,
+      "explanation": "That is compiler bootstrapping."
+    },
+    {
+      "id": "q4",
+      "type": "scenario",
+      "question": "A team creates a compiler in C and later rewrites it in its own language. Which concept applies?",
+      "options": ["Virtualization", "Bootstrapping", "Garbage Collection", "Caching"],
+      "correctAnswer": 1,
+      "explanation": "The compiler became self-hosted."
+    },
+    {
+      "id": "q5",
+      "type": "misconception",
+      "question": "Compilers are unnecessary because CPUs understand source code.",
+      "options": ["True", "False", "Sometimes", "Depends"],
+      "correctAnswer": 1,
+      "explanation": "CPUs require machine instructions."
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "id": "01-primitive-vs-non-primitive",
+  "title": "Primitive vs Non-Primitive Values",
+  "estimatedMinutes": 3,
+  "learningObjectives": [
+    "Understand why JavaScript has two value families",
+    "Differentiate primitive and non-primitive values",
+    "Learn value and reference concepts"
+  ],
+  "image": "./image.png",
+  "content": {
+    "explanation": "JavaScript stores information in two major categories: primitive values and non-primitive values (objects). This distinction exists because simple values and complex values have different requirements. Primitive values such as numbers, strings, and booleans represent complete pieces of information by themselves. They are stored and copied by value, meaning each variable gets its own independent copy. Non-primitive values such as objects, arrays, and functions can contain multiple related pieces of data. Instead of copying the entire structure every time, JavaScript stores and copies references to the object. This design improves memory efficiency, performance, and manageability. Primitive values are immutable, while objects are mutable. Primitive comparisons check actual contents, whereas object comparisons check whether two variables point to the same memory location. Understanding this distinction is one of the most important foundations of JavaScript because it affects memory, equality checks, copying behavior, and debugging.",
+    "example": "The value 25 is a primitive because it represents a complete piece of information. A student object containing name, age, and marks is a non-primitive because it groups multiple values together.",
+    "analogy": "A primitive is like a single book. An object is like a library containing many books organized together.",
+    "keyTakeaway": "Primitives store actual values, while objects store references to complex data."
+  },
+  "tags": [
+    "Primitive",
+    "Object",
+    "Reference",
+    "Memory",
+    "JavaScript"
+  ],
+  "category": "JavaScript Fundamentals",
+  "revisionSummary": "Primitives store values; objects store references.",
+  "mcqs": [
+    {
+      "id": "q1",
+      "type": "definition",
+      "question": "What are the two major families of JavaScript values?",
+      "options": [
+        "Variables and Functions",
+        "Primitive and Non-Primitive",
+        "Stack and Heap",
+        "Classes and Objects"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Every JavaScript value belongs to either the primitive or non-primitive family."
+    },
+    {
+      "id": "q2",
+      "type": "understanding",
+      "question": "Why does JavaScript separate values into primitive and non-primitive categories?",
+      "options": [
+        "To support multiple browsers",
+        "To improve memory management and performance",
+        "To reduce file size",
+        "To increase internet speed"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Different storage and copying strategies help optimize memory usage and execution."
+    },
+    {
+      "id": "q3",
+      "type": "application",
+      "question": "Which of the following is a primitive value?",
+      "options": [
+        "{ name: 'Rahul' }",
+        "[1, 2, 3]",
+        "25",
+        "function() {}"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Numbers are primitive values stored directly."
+    },
+    {
+      "id": "q4",
+      "type": "scenario",
+      "question": "A developer creates a Student record containing name, age, marks, and address. Which value family is most suitable?",
+      "options": [
+        "Primitive",
+        "Boolean",
+        "Non-Primitive Object",
+        "Symbol"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Objects are designed to group related pieces of information together."
+    },
+    {
+      "id": "q5",
+      "type": "misconception",
+      "question": "Objects are copied exactly like primitive values.",
+      "options": [
+        "True",
+        "False",
+        "Only in Node.js",
+        "Only in Chrome"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Objects are copied by reference, while primitives are copied by value."
+    }
+  ]
+}

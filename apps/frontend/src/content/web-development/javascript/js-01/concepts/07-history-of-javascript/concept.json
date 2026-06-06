@@ -1,0 +1,23 @@
+{
+  "id": "07-history-of-javascript",
+  "title": "Why JavaScript Exists",
+  "estimatedMinutes": 3,
+  "learningObjectives": ["Understand static websites","Learn the need for interactivity","Know the origin problem"],
+  "image": "./image.png",
+  "content": {
+    "explanation": "Early websites were static documents that displayed information but could not react to users. Every interaction required communication with a server, creating delays and poor user experiences. Netscape recognized the need for browser-side logic that could provide immediate feedback. This demand for interactivity ultimately led to the creation of JavaScript.",
+    "example": "Form validation moved from servers to browsers for faster feedback.",
+    "analogy": "Instead of calling a teacher for every answer, you solve simple problems yourself.",
+    "keyTakeaway": "JavaScript was created to make websites interactive."
+  },
+  "tags": ["History","Netscape","Interactivity"],
+  "category": "JavaScript Fundamentals",
+  "revisionSummary": "Static websites created the need for JavaScript.",
+  "mcqs": [
+    {"id":"q1","type":"definition","question":"What problem did JavaScript solve?","options":["Storage","Interactivity","Networking","Databases"],"correctAnswer":1,"explanation":"It enabled interactive webpages."},
+    {"id":"q2","type":"understanding","question":"Why were static pages limiting?","options":["Too colorful","No interaction","Too secure","Too fast"],"correctAnswer":1,"explanation":"They could not react."},
+    {"id":"q3","type":"application","question":"Instant form validation is an example of what?","options":["Server rendering","Client-side logic","Database migration","Hosting"],"correctAnswer":1,"explanation":"Validation happens in browser."},
+    {"id":"q4","type":"scenario","question":"Every action requires a server request. User experience becomes?","options":["Faster","Slower","Unchanged","Offline"],"correctAnswer":1,"explanation":"Extra requests increase delay."},
+    {"id":"q5","type":"misconception","question":"JavaScript was created because developers wanted another language.","options":["True","False","Partly","Unknown"],"correctAnswer":1,"explanation":"It solved a web problem."}
+  ]
+}

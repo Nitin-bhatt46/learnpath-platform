@@ -1,0 +1,93 @@
+{
+  "id": "10-boolean-conversion-truthy-falsy",
+  "title": "Boolean Conversion, Truthy and Falsy Values",
+  "estimatedMinutes": 4,
+  "learningObjectives": [
+    "Understand Boolean conversion",
+    "Identify truthy and falsy values",
+    "Avoid common truthiness misconceptions"
+  ],
+  "image": "./image.png",
+  "content": {
+    "explanation": "Computers ultimately make decisions using only two states: true and false. Because of this, JavaScript can convert any value into a Boolean. This process is called Boolean conversion. JavaScript has a small set of falsy values that automatically convert to false. These include false, 0, -0, 0n, an empty string (\"\"), null, undefined, and NaN. Every other value is considered truthy and converts to true. This behavior is heavily used in conditions, loops, validation logic, and short-circuit operators. Understanding truthy and falsy values is important because many JavaScript bugs occur when developers incorrectly assume how a value behaves in a condition. One of the most common interview traps is that empty arrays ([]) and empty objects ({}) are truthy because they are objects, not because they contain data. Professional developers rely on explicit checks when business rules require precise validation.",
+    "example": "Boolean([]) returns true and Boolean({}) returns true, even though both appear empty.",
+    "analogy": "Falsy values are like a very short guest list. Everyone not on the list automatically gets allowed into the event.",
+    "keyTakeaway": "Only a few values are falsy; almost everything else in JavaScript is truthy."
+  },
+  "tags": [
+    "Boolean",
+    "Truthy",
+    "Falsy",
+    "Type Conversion",
+    "JavaScript"
+  ],
+  "category": "JavaScript Fundamentals",
+  "revisionSummary": "Learn the falsy list; everything else is truthy.",
+  "mcqs": [
+    {
+      "id": "q1",
+      "type": "definition",
+      "question": "What is a falsy value?",
+      "options": [
+        "A value that becomes false during Boolean conversion",
+        "A value that cannot be stored",
+        "A value that is always undefined",
+        "A value that causes an error"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Falsy values convert to false when evaluated as booleans."
+    },
+    {
+      "id": "q2",
+      "type": "understanding",
+      "question": "Why are truthy and falsy values important?",
+      "options": [
+        "They determine how values behave in conditions",
+        "They increase memory usage",
+        "They change variable names",
+        "They create objects automatically"
+      ],
+      "correctAnswer": 0,
+      "explanation": "JavaScript uses truthiness when evaluating conditions and logical expressions."
+    },
+    {
+      "id": "q3",
+      "type": "application",
+      "question": "What is the result of Boolean('hello')?",
+      "options": [
+        "false",
+        "undefined",
+        "NaN",
+        "true"
+      ],
+      "correctAnswer": 3,
+      "explanation": "A non-empty string is a truthy value."
+    },
+    {
+      "id": "q4",
+      "type": "scenario",
+      "question": "A developer writes if([]) { console.log('Run'); }. What happens?",
+      "options": [
+        "Nothing happens",
+        "An error occurs",
+        "The code inside runs",
+        "The array becomes false"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Arrays are objects, and all objects are truthy."
+    },
+    {
+      "id": "q5",
+      "type": "misconception",
+      "question": "An empty array ([]) is a falsy value.",
+      "options": [
+        "True",
+        "False",
+        "Only in strict mode",
+        "Only in Node.js"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Arrays are objects, and objects are truthy even when empty."
+    }
+  ]
+}

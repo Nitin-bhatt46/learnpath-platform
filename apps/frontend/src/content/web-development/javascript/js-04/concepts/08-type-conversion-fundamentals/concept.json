@@ -1,0 +1,93 @@
+{
+  "id": "08-type-conversion-fundamentals",
+  "title": "Type Conversion Fundamentals",
+  "estimatedMinutes": 3,
+  "learningObjectives": [
+    "Understand why type conversion exists",
+    "Differentiate implicit and explicit conversion",
+    "Recognize common coercion pitfalls"
+  ],
+  "image": "./image.png",
+  "content": {
+    "explanation": "Type conversion, also known as type casting, is the process of changing a value from one data type to another. This is necessary because data often enters JavaScript applications in unexpected formats. For example, values from HTML forms are usually received as strings, even when they represent numbers. JavaScript supports two forms of type conversion. Implicit conversion, also called coercion, happens automatically when JavaScript decides to convert values during operations. Explicit conversion occurs when developers intentionally convert values using functions such as Number(), String(), or Boolean(). While implicit conversion can be convenient, it can also lead to confusing behavior and bugs. Professional developers generally prefer explicit conversion because it makes code easier to read, understand, and maintain. Understanding type conversion is essential because it affects calculations, comparisons, user input processing, API handling, and many real-world programming scenarios.",
+    "example": "The value '25' received from a form is a string. Using Number('25') converts it into the numeric value 25 for calculations.",
+    "analogy": "Type conversion is like translating a document from one language into another so both parties can understand it correctly.",
+    "keyTakeaway": "Explicit conversion is safer and more predictable than relying on JavaScript's automatic coercion."
+  },
+  "tags": [
+    "Type Conversion",
+    "Type Casting",
+    "Coercion",
+    "JavaScript",
+    "Data Types"
+  ],
+  "category": "JavaScript Fundamentals",
+  "revisionSummary": "Prefer explicit conversion over implicit coercion.",
+  "mcqs": [
+    {
+      "id": "q1",
+      "type": "definition",
+      "question": "What is type conversion?",
+      "options": [
+        "Creating variables",
+        "Changing a value from one data type to another",
+        "Comparing two values",
+        "Storing data in memory"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Type conversion changes a value from one type into another type."
+    },
+    {
+      "id": "q2",
+      "type": "understanding",
+      "question": "What is the main difference between implicit and explicit conversion?",
+      "options": [
+        "Explicit conversion is automatic",
+        "Implicit conversion is performed by JavaScript automatically",
+        "Explicit conversion only works with strings",
+        "Implicit conversion is always safer"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Implicit conversion is automatic, while explicit conversion is performed intentionally by the developer."
+    },
+    {
+      "id": "q3",
+      "type": "application",
+      "question": "What is the result of '5' + 2?",
+      "options": [
+        "7",
+        "52",
+        "Error",
+        "undefined"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The + operator performs string concatenation when one operand is a string."
+    },
+    {
+      "id": "q4",
+      "type": "scenario",
+      "question": "A user enters age as '30' in a form. Before performing calculations, what is the safest approach?",
+      "options": [
+        "Use the value directly",
+        "Convert it using Number()",
+        "Store it in an array",
+        "Convert it to Boolean"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Explicitly converting the string to a number ensures predictable calculations."
+    },
+    {
+      "id": "q5",
+      "type": "misconception",
+      "question": "Implicit type conversion always produces predictable results.",
+      "options": [
+        "True",
+        "False",
+        "Only for numbers",
+        "Only for strings"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Implicit coercion can lead to surprising behavior and bugs."
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "id": "11-logical-operators",
+  "title": "Logical Operators",
+  "estimatedMinutes": 3,
+  "learningObjectives": [
+    "Understand logical operators",
+    "Learn short-circuit evaluation",
+    "Use logical expressions effectively"
+  ],
+  "image": "./image.png",
+  "content": {
+    "explanation": "Logical operators help JavaScript combine, evaluate, and manipulate conditions. The three logical operators are AND (&&), OR (||), and NOT (!). The AND operator requires all conditions to be truthy before returning a truthy result. The OR operator returns a truthy result if at least one condition is truthy. The NOT operator reverses a value's truthiness. JavaScript also uses short-circuit evaluation to improve efficiency. With &&, evaluation stops as soon as a falsy value is found because the final result cannot become truthy. With ||, evaluation stops as soon as a truthy value is found because the final result is already determined. Logical operators do more than return true or false. They can return actual values, making them useful for default values, conditional execution, and safe property access. Understanding logical operators is essential because they appear in authentication systems, validation logic, permissions, and application flow control.",
+    "example": "let displayName = username || 'Guest'; returns 'Guest' when username is empty or falsy.",
+    "analogy": "AND is like requiring every key to open a vault, while OR is like having multiple keys where any one can unlock the door.",
+    "keyTakeaway": "Logical operators combine conditions and use short-circuit evaluation to improve efficiency."
+  },
+  "tags": [
+    "Logical Operators",
+    "Boolean",
+    "Short Circuit",
+    "Conditions",
+    "JavaScript"
+  ],
+  "category": "JavaScript Fundamentals",
+  "revisionSummary": "Logical operators combine conditions and return values.",
+  "mcqs": [
+    {
+      "id": "q1",
+      "type": "definition",
+      "question": "Which operator returns true only when all conditions are truthy?",
+      "options": [
+        "||",
+        "!",
+        "&&",
+        "==="
+      ],
+      "correctAnswer": 2,
+      "explanation": "The AND operator requires all conditions to be truthy."
+    },
+    {
+      "id": "q2",
+      "type": "understanding",
+      "question": "What is short-circuit evaluation?",
+      "options": [
+        "Executing code twice",
+        "Stopping evaluation once the result is known",
+        "Comparing object references",
+        "Converting values into strings"
+      ],
+      "correctAnswer": 1,
+      "explanation": "JavaScript stops evaluating expressions when the final result is already determined."
+    },
+    {
+      "id": "q3",
+      "type": "application",
+      "question": "What is the output of:\n0 || '' || 'Hello' ?",
+      "options": [
+        "0",
+        "''",
+        "'Hello'",
+        "undefined"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The OR operator returns the first truthy value."
+    },
+    {
+      "id": "q4",
+      "type": "scenario",
+      "question": "A website allows access if a user is an Admin OR an Owner. Which operator should be used?",
+      "options": [
+        "&&",
+        "!",
+        "||",
+        "=="
+      ],
+      "correctAnswer": 2,
+      "explanation": "OR is used when any one condition is sufficient."
+    },
+    {
+      "id": "q5",
+      "type": "misconception",
+      "question": "The && operator always returns only true or false.",
+      "options": [
+        "True",
+        "False",
+        "Only in strict mode",
+        "Only in Node.js"
+      ],
+      "correctAnswer": 1,
+      "explanation": "&& returns the first falsy value or the last truthy value, not necessarily a boolean."
+    }
+  ]
+}
