@@ -4,6 +4,7 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 import { useProgress } from "@/lib/progress";
 import { Button, ButtonLink } from "@/components/ui/button";
+import { CourseProgress, ModuleProgress } from "@/components/learning/progress-indicators";
 import type { Course, Skill, LectureOverview } from "@/lib/content";
 import {
   CheckCircleIcon,
@@ -81,6 +82,31 @@ export function CourseRoadmapView({ course }: { course: Course }) {
   }, [course]);
 
   // Filter skills to only show those that have content (lectures)
+  const courseProgressPct = useMemo(() => {
+    let totalLessons = 0;
+    let completedLessons = 0;
+    for (const skill of course.skills) {
+      for (const lecture of skill.lectures) {
+        totalLessons += lecture.conceptCount;
+        const lp = getLectureProgress(lecture.id);
+        completedLessons += lp.completedConcepts.length;
+      }
+    }
+    return totalLessons > 0 ? (completedLessons / totalLessons) * 100 : 0;
+  }, [course.skills, getLectureProgress, progress]);
+
+  const activeSkillProgress = useMemo(() => {
+    if (!activeSkill) return null;
+    let totalLessons = 0;
+    let completedLessons = 0;
+    for (const lecture of activeSkill.lectures) {
+      totalLessons += lecture.conceptCount;
+      const lp = getLectureProgress(lecture.id);
+      completedLessons += lp.completedConcepts.length;
+    }
+    return { completedLessons, totalLessons };
+  }, [activeSkill, getLectureProgress, progress]);
+
   const availableSkills = useMemo(() => {
     return course.skills.filter((s) => s.lectures.length > 0);
   }, [course.skills]);
@@ -162,6 +188,11 @@ export function CourseRoadmapView({ course }: { course: Course }) {
                 <span className="text-xs font-bold text-text-main mt-0.5 block line-clamp-1">{courseMetrics.difficulty}</span>
               </div>
             </div>
+            {courseProgressPct > 0 && (
+              <div className="mt-6 border-t border-border-color/30 pt-5">
+                <CourseProgress courseName={course.title} progressPct={courseProgressPct} />
+              </div>
+            )}
           </section>
 
           {/* SECTION 2: ROADMAP OVERVIEW FLOW */}
@@ -284,10 +315,19 @@ export function CourseRoadmapView({ course }: { course: Course }) {
             >
               &larr; Back to Modules Dashboard
             </button>
-            <div className="flex flex-col gap-1.5">
+            <div className="flex flex-col gap-1.5 font-semibold">
               <span className="text-[10px] font-bold uppercase tracking-wider text-text-muted">MODULE PARTS</span>
               <h2 className="text-2xl font-display font-bold text-text-main">{activeSkill.title}</h2>
-              <p className="text-xs text-text-muted leading-5 max-w-xl">{activeSkill.description}</p>
+              <p className="text-xs text-text-muted font-medium leading-5 max-w-xl">{activeSkill.description}</p>
+              {activeSkillProgress && (
+                <div className="mt-2.5 max-w-md w-full animate-fadeIn">
+                  <ModuleProgress
+                    moduleName={activeSkill.title}
+                    currentUnit={activeSkillProgress.completedLessons}
+                    totalUnits={activeSkillProgress.totalLessons}
+                  />
+                </div>
+              )}
             </div>
           </div>
 
@@ -363,10 +403,19 @@ export function CourseRoadmapView({ course }: { course: Course }) {
             >
               &larr; Back to Parts List
             </button>
-            <div className="flex flex-col gap-1.5">
+            <div className="flex flex-col gap-1.5 font-semibold">
               <span className="text-[10px] font-bold uppercase tracking-wider text-text-muted">PART LESSONS</span>
               <h2 className="text-2xl font-display font-bold text-text-main">{activePart.partTitle || activePart.title}</h2>
-              <p className="text-xs text-text-muted leading-5 max-w-xl">{activePart.description}</p>
+              <p className="text-xs text-text-muted font-medium leading-5 max-w-xl">{activePart.description}</p>
+              {activeSkillProgress && (
+                <div className="mt-2.5 max-w-md w-full animate-fadeIn">
+                  <ModuleProgress
+                    moduleName={activeSkill.title}
+                    currentUnit={activeSkillProgress.completedLessons}
+                    totalUnits={activeSkillProgress.totalLessons}
+                  />
+                </div>
+              )}
             </div>
           </div>
 

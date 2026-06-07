@@ -7,7 +7,7 @@ import { useProgress } from "@/lib/progress";
 import { Button } from "@/components/ui/button";
 import { ConceptView } from "@/components/learning/concept-view";
 import { FeedbackView } from "@/components/learning/feedback-view";
-import { ProgressBar } from "@/components/learning/progress-bar";
+import { ContextProgress } from "@/components/learning/progress-indicators";
 import { QuizView } from "@/components/learning/quiz-view";
 
 type Step = "concept" | "quiz" | "feedback";
@@ -19,7 +19,8 @@ export function LearningFlow({
   courseLecturesData = [],
   courseName = "",
   moduleLecturesData = [],
-  moduleName = ""
+  moduleName = "",
+  courseId = ""
 }: {
   lecture: Lecture;
   concepts: Concept[];
@@ -28,6 +29,7 @@ export function LearningFlow({
   courseName?: string;
   moduleLecturesData?: Array<{ id: string; conceptCount: number }>;
   moduleName?: string;
+  courseId?: string;
 }) {
   return (
     <Suspense fallback={<div className="flex min-h-screen items-center justify-center text-slate-400">Loading flow...</div>}>
@@ -39,6 +41,7 @@ export function LearningFlow({
         courseName={courseName}
         moduleLecturesData={moduleLecturesData}
         moduleName={moduleName}
+        courseId={courseId}
       />
     </Suspense>
   );
@@ -51,7 +54,8 @@ function LearningFlowContent({
   courseLecturesData = [],
   courseName = "",
   moduleLecturesData = [],
-  moduleName = ""
+  moduleName = "",
+  courseId = ""
 }: {
   lecture: Lecture;
   concepts: Concept[];
@@ -60,6 +64,7 @@ function LearningFlowContent({
   courseName?: string;
   moduleLecturesData?: Array<{ id: string; conceptCount: number }>;
   moduleName?: string;
+  courseId?: string;
 }) {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -151,42 +156,54 @@ function LearningFlowContent({
       {/* Centered Readability Width Outer Shell */}
       <div className="mx-auto max-w-[800px] w-full">
         {/* Sticky Header Panel with Progression Tracking */}
-        <header className="sticky top-0 z-10 -mx-4 mb-8 border-b border-border-color bg-bg-primary/95 px-4 py-4 backdrop-blur sm:-mx-6 sm:px-6">
-          <div className="mb-4 flex items-center justify-between gap-3">
-            <div>
-              <p className="text-[10px] font-bold uppercase tracking-wider text-text-muted">{lecture.title}</p>
-              <h1 className="mt-1 text-xs font-bold text-text-main">
-                {concept.title}
-              </h1>
+        <header className="sticky top-0 z-10 -mx-4 mb-8 border-b border-border-color bg-bg-primary/95 px-4 py-3 backdrop-blur sm:-mx-6 sm:px-6">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-xs">
+            {/* Left side: Breadcrumb path */}
+            <div className="flex flex-wrap items-center gap-1.5 font-semibold text-text-muted">
+              <span className="hover:text-primary transition-colors cursor-pointer" onClick={() => router.push("/courses")}>Career Paths</span>
+              <span className="opacity-40 select-none">&gt;</span>
+              {courseId ? (
+                <span className="hover:text-primary transition-colors cursor-pointer" onClick={() => router.push(`/courses/${courseId}`)}>{courseName}</span>
+              ) : (
+                <span>{courseName}</span>
+              )}
+              <span className="opacity-40 select-none">&gt;</span>
+              <span>{moduleName}</span>
+              <span className="opacity-40 select-none">&gt;</span>
+              <span className="text-text-main font-bold">Unit {conceptIndex + 1}</span>
+              {step === "quiz" && (
+                <>
+                  <span className="opacity-40 select-none">&gt;</span>
+                  <span className="text-amber-500 font-bold">Quiz</span>
+                </>
+              )}
             </div>
-            <button
-              className="min-h-10 rounded-xl px-4 border border-border-color bg-surface text-xs font-bold text-text-muted hover:text-text-main hover:bg-bg-primary transition-colors shadow-3xs cursor-pointer"
-              onClick={() => router.push("/")}
-            >
-              Exit Flow
-            </button>
-          </div>
-          
-          {/* Progress Stack (Course, Module, Unit, Quiz Completion) */}
-          <div className="space-y-3 border-t border-border-color/30 pt-3">
-            {courseName && (
-              <ProgressBar value={courseProgressPct} label={`Course Progress: ${courseName}`} variant="amber" />
-            )}
-            {moduleName && (
-              <ProgressBar value={moduleProgressPct} label={`Module Progress: ${moduleName}`} variant="amber" />
-            )}
-            <ProgressBar
-              value={lessonProgressPct}
-              label={`Unit Progress: Unit ${conceptIndex + 1} of ${concepts.length}`}
-              variant="amber"
-            />
-            {step === "quiz" && totalQuestions > 0 && (
-              <ProgressBar
-                value={(answeredCount / totalQuestions) * 100}
-                label={`Quiz Completion: ${answeredCount} of ${totalQuestions} answered`}
-                variant="amber"
-              />
-            )}
+
+            {/* Right side: Context Progress and Exit Button */}
+            <div className="flex flex-wrap items-center justify-between md:justify-end gap-4 flex-1 md:flex-initial">
+              {step === "quiz" ? (
+                <ContextProgress
+                  type="quiz"
+                  currentQuestion={Math.min(answeredCount + 1, totalQuestions)}
+                  totalQuestions={totalQuestions}
+                  progressPct={totalQuestions > 0 ? (answeredCount / totalQuestions) * 100 : 0}
+                />
+              ) : (
+                <ContextProgress
+                  type="unit"
+                  currentUnit={conceptIndex + 1}
+                  totalUnits={concepts.length}
+                  progressPct={lessonProgressPct}
+                />
+              )}
+              
+              <button
+                className="rounded-lg border border-border-color bg-surface px-3 py-1.5 text-2xs font-bold text-text-muted hover:text-text-main hover:bg-bg-primary transition-colors shadow-3xs cursor-pointer whitespace-nowrap"
+                onClick={() => router.push(courseId ? `/courses/${courseId}` : "/")}
+              >
+                Exit Flow
+              </button>
+            </div>
           </div>
         </header>
 

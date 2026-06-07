@@ -55,6 +55,7 @@ export default async function LecturePage({ params }: { params: Promise<{ lectur
         courseName={courseName}
         moduleLecturesData={moduleLecturesData}
         moduleName={moduleName}
+        courseId={parentCourse?.id}
       />
     </ProgressProvider>
   );

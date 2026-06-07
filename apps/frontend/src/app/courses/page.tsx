@@ -1,6 +1,7 @@
 import { ButtonLink } from "@/components/ui/button";
 import { getCourses } from "@/lib/content";
 import { TargetIcon } from "@/components/ui/icons";
+import { CourseCardProgress } from "@/components/learning/course-card-progress";
 
 export default async function CoursesPage() {
   const courses = await getCourses();
@@ -26,8 +27,8 @@ export default async function CoursesPage() {
         {/* GRID LAYOUT */}
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {courses.map((course) => {
-            const isBeginner = course.difficulty?.toLowerCase().includes("beginner");
-            const isIntermediate = course.difficulty?.toLowerCase().includes("intermediate");
+            const isBeginner = !!course.difficulty?.toLowerCase().includes("beginner");
+            const isIntermediate = !!course.difficulty?.toLowerCase().includes("intermediate");
             
             return (
               <article
@@ -85,19 +86,11 @@ export default async function CoursesPage() {
                     </div>
                   )}
 
-                  <div className="space-y-1.5 pt-1">
-                    <div className="flex justify-between text-[9px] font-bold uppercase tracking-wider text-text-muted">
-                      <span>Beginner</span>
-                      <span>Advanced</span>
-                    </div>
-                    <div className="h-1 w-full rounded-full bg-bg-primary border border-border-color/30 overflow-hidden">
-                      <div
-                        className={`h-full rounded-full bg-primary transition-all duration-300 ${
-                          isBeginner ? "w-full" : isIntermediate ? "w-2/3 ml-[33%]" : "w-1/3 ml-[66%]"
-                        }`}
-                      />
-                    </div>
-                  </div>
+                  <CourseCardProgress
+                    course={course}
+                    isBeginner={isBeginner}
+                    isIntermediate={isIntermediate}
+                  />
                 </div>
 
                 <div className="mt-6 pt-4 border-t border-border-color/40">
