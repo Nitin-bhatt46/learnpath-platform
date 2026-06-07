@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState, Suspense, useCallback } from "react";
+import { useMemo, useState, Suspense, useCallback, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import type { Concept, Lecture } from "@/lib/content";
 import { useProgress } from "@/lib/progress";
@@ -85,6 +85,31 @@ function LearningFlowContent({
   const [conceptIndex, setConceptIndex] = useState(initialIndex);
   const [step, setStep] = useState<Step>("concept");
   const [answers, setAnswers] = useState<Record<string, number>>({});
+  const [showExitModal, setShowExitModal] = useState(false);
+
+  useEffect(() => {
+    if (!showExitModal) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setShowExitModal(false);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [showExitModal]);
+
+  const handleExitClick = useCallback(() => {
+    setShowExitModal(true);
+  }, []);
+
+  const handleCancelExit = useCallback(() => {
+    setShowExitModal(false);
+  }, []);
+
+  const handleConfirmExit = useCallback(() => {
+    setShowExitModal(false);
+    router.push(courseId ? `/courses/${courseId}` : "/");
+  }, [router, courseId]);
 
   const concept = concepts[conceptIndex];
 
@@ -156,31 +181,31 @@ function LearningFlowContent({
       {/* Centered Readability Width Outer Shell */}
       <div className="mx-auto max-w-[800px] w-full">
         {/* Sticky Header Panel with Progression Tracking */}
-        <header className="sticky top-0 z-10 -mx-4 mb-8 border-b border-border-color bg-bg-primary/95 px-4 py-3 backdrop-blur sm:-mx-6 sm:px-6">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-xs">
+        <header className="sticky top-0 z-10 -mx-4 mb-8 border-b border-border-color bg-bg-primary/95 px-4 py-2.5 backdrop-blur sm:-mx-6 sm:px-6">
+          <div className="flex items-center justify-between gap-4 text-xs">
             {/* Left side: Breadcrumb path */}
-            <div className="flex flex-wrap items-center gap-1.5 font-semibold text-text-muted">
-              <span className="hover:text-primary transition-colors cursor-pointer" onClick={() => router.push("/courses")}>Career Paths</span>
-              <span className="opacity-40 select-none">&gt;</span>
+            <div className="flex items-center gap-1.5 font-semibold text-text-muted min-w-0">
+              <span className="hidden sm:inline hover:text-primary transition-colors cursor-pointer whitespace-nowrap" onClick={() => router.push("/courses")}>Career Paths</span>
+              <span className="hidden sm:inline opacity-40 select-none">&gt;</span>
               {courseId ? (
-                <span className="hover:text-primary transition-colors cursor-pointer" onClick={() => router.push(`/courses/${courseId}`)}>{courseName}</span>
+                <span className="hidden md:inline hover:text-primary transition-colors cursor-pointer truncate max-w-[120px]" onClick={() => router.push(`/courses/${courseId}`)}>{courseName}</span>
               ) : (
-                <span>{courseName}</span>
+                <span className="hidden md:inline truncate max-w-[120px]">{courseName}</span>
               )}
+              <span className="hidden md:inline opacity-40 select-none">&gt;</span>
+              <span className="truncate max-w-[100px] sm:max-w-none">{moduleName}</span>
               <span className="opacity-40 select-none">&gt;</span>
-              <span>{moduleName}</span>
-              <span className="opacity-40 select-none">&gt;</span>
-              <span className="text-text-main font-bold">Unit {conceptIndex + 1}</span>
+              <span className="text-text-main font-bold whitespace-nowrap">Unit {conceptIndex + 1}</span>
               {step === "quiz" && (
                 <>
                   <span className="opacity-40 select-none">&gt;</span>
-                  <span className="text-amber-500 font-bold">Quiz</span>
+                  <span className="text-amber-500 font-bold whitespace-nowrap">Quiz</span>
                 </>
               )}
             </div>
 
             {/* Right side: Context Progress and Exit Button */}
-            <div className="flex flex-wrap items-center justify-between md:justify-end gap-4 flex-1 md:flex-initial">
+            <div className="flex items-center gap-3 sm:gap-4 shrink-0">
               {step === "quiz" ? (
                 <ContextProgress
                   type="quiz"
@@ -198,8 +223,8 @@ function LearningFlowContent({
               )}
               
               <button
-                className="rounded-lg border border-border-color bg-surface px-3 py-1.5 text-2xs font-bold text-text-muted hover:text-text-main hover:bg-bg-primary transition-colors shadow-3xs cursor-pointer whitespace-nowrap"
-                onClick={() => router.push(courseId ? `/courses/${courseId}` : "/")}
+                className="rounded-lg border border-border-color/80 bg-transparent px-2.5 py-1 text-[11px] font-semibold text-text-muted hover:text-[#EF4444] hover:border-[#EF4444] hover:bg-[#EF4444]/10 transition-all duration-200 cursor-pointer whitespace-nowrap"
+                onClick={handleExitClick}
               >
                 Exit Flow
               </button>
@@ -243,6 +268,40 @@ function LearningFlowContent({
           )}
         </div>
       </div>
+
+      {/* Exit Confirmation Modal */}
+      {showExitModal && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-xs p-4 animate-modal-backdrop"
+          onClick={handleCancelExit}
+        >
+          <div 
+            className="relative w-full max-w-sm rounded-2xl border border-border-color bg-card-bg p-6 shadow-xl animate-modal-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h3 className="font-display text-lg font-bold text-text-main">
+              Leave Learning Flow?
+            </h3>
+            <p className="mt-2 text-sm text-text-muted">
+              Your progress has been saved.
+            </p>
+            <div className="mt-6 flex flex-col sm:flex-row-reverse gap-3">
+              <button
+                className="w-full sm:w-auto rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-all cursor-pointer shadow-sm active:scale-[0.98] text-center"
+                onClick={handleCancelExit}
+              >
+                Continue Learning
+              </button>
+              <button
+                className="w-full sm:w-auto rounded-lg border border-border-color/80 bg-transparent px-4 py-2 text-sm font-semibold text-text-muted hover:text-[#EF4444] hover:border-[#EF4444] hover:bg-[#EF4444]/10 focus:outline-none focus:ring-2 focus:ring-[#EF4444]/50 focus:ring-offset-2 transition-all duration-200 cursor-pointer text-center"
+                onClick={handleConfirmExit}
+              >
+                Exit Flow
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   );
 }

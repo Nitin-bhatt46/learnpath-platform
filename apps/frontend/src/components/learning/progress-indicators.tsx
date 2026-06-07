@@ -73,15 +73,12 @@ export function UnitProgress({
   progressPct: number;
   className?: string;
 }) {
-  const textBar = getTextProgressBar(progressPct, 10);
+  const roundedPct = Math.round(progressPct);
   return (
-    <div className={`flex items-center gap-3 text-[11px] font-semibold text-text-muted ${className}`}>
+    <div className={`flex items-center gap-2.5 text-[11px] font-semibold text-text-muted ${className}`}>
       <span>Unit {currentUnit} of {totalUnits}</span>
       <span className="opacity-30 select-none">|</span>
-      <div className="flex items-center gap-1.5">
-        <span className="text-text-muted">Progress:</span>
-        <span className="font-mono text-primary tracking-wider text-xs font-bold select-none">{textBar}</span>
-      </div>
+      <span>Progress {roundedPct}%</span>
     </div>
   );
 }
@@ -97,16 +94,12 @@ export function QuizProgress({
   progressPct: number;
   className?: string;
 }) {
-  const blocksCount = totalQuestions > 0 ? totalQuestions : 10;
-  const textBar = getTextProgressBar(progressPct, blocksCount);
+  const roundedPct = Math.round(progressPct);
   return (
-    <div className={`flex items-center gap-3 text-[11px] font-semibold text-text-muted ${className}`}>
+    <div className={`flex items-center gap-2.5 text-[11px] font-semibold text-text-muted ${className}`}>
       <span>Question {currentQuestion} of {totalQuestions}</span>
       <span className="opacity-30 select-none">|</span>
-      <div className="flex items-center gap-1.5">
-        <span className="text-text-muted">Quiz Progress:</span>
-        <span className="font-mono text-amber-500 tracking-wider text-xs font-bold select-none">{textBar}</span>
-      </div>
+      <span>Progress {roundedPct}%</span>
     </div>
   );
 }
